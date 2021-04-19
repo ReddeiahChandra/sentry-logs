@@ -1,0 +1,475 @@
+▶ Defining variables and helpers ...
+
+▶ Parsing command line ...
+
+▶ Setting up error handling ...
+
+▶ Checking minimum requirements ...
+WARN: Recommended minimum CPU cores available to Docker is 4, found 2
+
+▶ Creating volumes for persistent storage ...
+Created sentry-data.
+Created sentry-postgres.
+Created sentry-redis.
+Created sentry-zookeeper.
+Created sentry-kafka.
+Created sentry-clickhouse.
+Created sentry-symbolicator.
+
+▶ Ensuring files from examples ...
+Creating sentry/sentry.conf.py...
+Creating sentry/config.yml...
+Creating sentry/requirements.txt...
+Creating symbolicator/config.yml...
+Creating relay/config.yml...
+
+▶ Generating secret key ...
+Secret key written to sentry/config.yml
+
+▶ Replacing TSDB ...
+
+▶ Fetching and updating Docker images ...
+--no-ansi option is deprecated and will be removed in future versions.
+Some service image(s) must be built from source by running:
+    docker-compose build snuba-cleanup symbolicator-cleanup sentry-cleanup
+nightly: Pulling from getsentry/sentry
+Digest: sha256:599eb0953804b25815accf3d81f63bef0f36f2fba58d000307ebf96e2bd950c9
+Status: Image is up to date for getsentry/sentry:nightly
+docker.io/getsentry/sentry:nightly
+
+▶ Building and tagging Docker images ...
+
+--no-ansi option is deprecated and will be removed in future versions.
+smtp uses an image, skipping
+memcached uses an image, skipping
+redis uses an image, skipping
+postgres uses an image, skipping
+zookeeper uses an image, skipping
+kafka uses an image, skipping
+clickhouse uses an image, skipping
+geoipupdate uses an image, skipping
+snuba-api uses an image, skipping
+snuba-consumer uses an image, skipping
+snuba-outcomes-consumer uses an image, skipping
+snuba-sessions-consumer uses an image, skipping
+snuba-transactions-consumer uses an image, skipping
+snuba-replacer uses an image, skipping
+snuba-subscription-consumer-events uses an image, skipping
+snuba-subscription-consumer-transactions uses an image, skipping
+symbolicator uses an image, skipping
+web uses an image, skipping
+cron uses an image, skipping
+worker uses an image, skipping
+ingest-consumer uses an image, skipping
+post-process-forwarder uses an image, skipping
+subscription-consumer-events uses an image, skipping
+subscription-consumer-transactions uses an image, skipping
+relay uses an image, skipping
+nginx uses an image, skipping
+Building snuba-cleanup
+Sending build context to Docker daemon  3.072kB
+
+Step 1/5 : ARG BASE_IMAGE
+Step 2/5 : FROM ${BASE_IMAGE}
+ ---> ace3bd871a26
+Step 3/5 : RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+ ---> Running in 689c6226622f
+Get:1 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+Get:2 http://deb.debian.org/debian buster InRelease [121 kB]
+Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [272 kB]
+Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
+Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [9504 B]
+Fetched 8427 kB in 2s (4962 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  lsb-base sensible-utils
+Suggested packages:
+  anacron logrotate checksecurity
+Recommended packages:
+  default-mta | mail-transport-agent
+The following NEW packages will be installed:
+  cron lsb-base sensible-utils
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 143 kB of archives.
+After this operation, 383 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster/main amd64 sensible-utils all 0.0.12 [15.8 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 lsb-base all 10.2019051400 [28.4 kB]
+Get:3 http://deb.debian.org/debian buster/main amd64 cron amd64 3.0pl1-134+deb10u1 [99.0 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 143 kB in 0s (13.7 MB/s)
+Selecting previously unselected package sensible-utils.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6840 files and directories currently installed.)
+Preparing to unpack .../sensible-utils_0.0.12_all.deb ...
+Unpacking sensible-utils (0.0.12) ...
+Selecting previously unselected package lsb-base.
+Preparing to unpack .../lsb-base_10.2019051400_all.deb ...
+Unpacking lsb-base (10.2019051400) ...
+Selecting previously unselected package cron.
+Preparing to unpack .../cron_3.0pl1-134+deb10u1_amd64.deb ...
+Unpacking cron (3.0pl1-134+deb10u1) ...
+Setting up lsb-base (10.2019051400) ...
+Setting up sensible-utils (0.0.12) ...
+Setting up cron (3.0pl1-134+deb10u1) ...
+Adding group `crontab' (GID 101) ...
+Done.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Removing intermediate container 689c6226622f
+ ---> ef623d20d132
+Step 4/5 : COPY entrypoint.sh /entrypoint.sh
+ ---> 184a70cd54cb
+Step 5/5 : ENTRYPOINT ["/entrypoint.sh"]
+ ---> Running in 812ef4bf8ae9
+Removing intermediate container 812ef4bf8ae9
+ ---> a2288dd11291
+Successfully built a2288dd11291
+Successfully tagged snuba-cleanup-onpremise-local:latest
+Building symbolicator-cleanup
+Sending build context to Docker daemon  3.072kB
+
+Step 1/5 : ARG BASE_IMAGE
+Step 2/5 : FROM ${BASE_IMAGE}
+ ---> 260c00fda381
+Step 3/5 : RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+ ---> Using cache
+ ---> b3e6debdbeb2
+Step 4/5 : COPY entrypoint.sh /entrypoint.sh
+ ---> 8bc954f85913
+Step 5/5 : ENTRYPOINT ["/entrypoint.sh"]
+ ---> Running in d479392be095
+Removing intermediate container d479392be095
+ ---> bd31cf954e93
+Successfully built bd31cf954e93
+Successfully tagged symbolicator-cleanup-onpremise-local:latest
+Building sentry-cleanup
+Sending build context to Docker daemon  3.072kB
+
+Step 1/5 : ARG BASE_IMAGE
+Step 2/5 : FROM ${BASE_IMAGE}
+ ---> 647083876784
+Step 3/5 : RUN apt-get update && apt-get install -y --no-install-recommends cron &&     rm -r /var/lib/apt/lists/*
+ ---> Running in 8d42d31f9e7b
+Get:1 http://deb.debian.org/debian buster InRelease [121 kB]
+Get:2 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [272 kB]
+Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
+Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [9504 B]
+Fetched 8427 kB in 2s (5318 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  lsb-base sensible-utils
+Suggested packages:
+  anacron logrotate checksecurity
+Recommended packages:
+  default-mta | mail-transport-agent
+The following NEW packages will be installed:
+  cron lsb-base sensible-utils
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 143 kB of archives.
+After this operation, 383 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster/main amd64 sensible-utils all 0.0.12 [15.8 kB]
+Get:2 http://deb.debian.org/debian buster/main amd64 lsb-base all 10.2019051400 [28.4 kB]
+Get:3 http://deb.debian.org/debian buster/main amd64 cron amd64 3.0pl1-134+deb10u1 [99.0 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 143 kB in 0s (12.9 MB/s)
+Selecting previously unselected package sensible-utils.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 11935 files and directories currently installed.)
+Preparing to unpack .../sensible-utils_0.0.12_all.deb ...
+Unpacking sensible-utils (0.0.12) ...
+Selecting previously unselected package lsb-base.
+Preparing to unpack .../lsb-base_10.2019051400_all.deb ...
+Unpacking lsb-base (10.2019051400) ...
+Selecting previously unselected package cron.
+Preparing to unpack .../cron_3.0pl1-134+deb10u1_amd64.deb ...
+Unpacking cron (3.0pl1-134+deb10u1) ...
+Setting up lsb-base (10.2019051400) ...
+Setting up sensible-utils (0.0.12) ...
+Setting up cron (3.0pl1-134+deb10u1) ...
+Adding group `crontab' (GID 101) ...
+Done.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Removing intermediate container 8d42d31f9e7b
+ ---> ad5c43d771fe
+Step 4/5 : COPY entrypoint.sh /entrypoint.sh
+ ---> be442b541d1f
+Step 5/5 : ENTRYPOINT ["/entrypoint.sh"]
+ ---> Running in f71ef6d01587
+Removing intermediate container f71ef6d01587
+ ---> c51a5d1f9cbf
+Successfully built c51a5d1f9cbf
+Successfully tagged sentry-cleanup-onpremise-local:latest
+
+Docker images built.
+
+▶ Turning things off ...
+--no-ansi option is deprecated and will be removed in future versions.
+Removing network onpremise_default
+Network onpremise_default not found.
+--no-ansi option is deprecated and will be removed in future versions.
+Stopping sentry_onpremise_nginx_1                                    ... 
+Stopping sentry_onpremise_web_1                                      ... 
+Stopping sentry_onpremise_worker_1                                   ... 
+Stopping sentry_onpremise_sentry-cleanup_1                           ... 
+Stopping sentry_onpremise_ingest-consumer_1                          ... 
+Stopping sentry_onpremise_post-process-forwarder_1                   ... 
+Stopping sentry_onpremise_subscription-consumer-events_1             ... 
+Stopping sentry_onpremise_subscription-consumer-transactions_1       ... 
+Stopping sentry_onpremise_cron_1                                     ... 
+Stopping sentry_onpremise_snuba-cleanup_1                            ... 
+Stopping sentry_onpremise_relay_1                                    ... 
+Stopping sentry_onpremise_symbolicator-cleanup_1                     ... 
+Stopping sentry_onpremise_snuba-sessions-consumer_1                  ... 
+Stopping sentry_onpremise_snuba-outcomes-consumer_1                  ... 
+Stopping sentry_onpremise_snuba-api_1                                ... 
+Stopping sentry_onpremise_snuba-subscription-consumer-events_1       ... 
+Stopping sentry_onpremise_snuba-consumer_1                           ... 
+Stopping sentry_onpremise_snuba-replacer_1                           ... 
+Stopping sentry_onpremise_snuba-transactions-consumer_1              ... 
+Stopping sentry_onpremise_smtp_1                                     ... 
+Stopping sentry_onpremise_memcached_1                                ... 
+Stopping sentry_onpremise_snuba-subscription-consumer-transactions_1 ... 
+Stopping sentry_onpremise_symbolicator_1                             ... 
+Stopping sentry_onpremise_postgres_1                                 ... 
+Stopping sentry_onpremise_kafka_1                                    ... 
+Stopping sentry_onpremise_zookeeper_1                                ... 
+Stopping sentry_onpremise_clickhouse_1                               ... 
+Stopping sentry_onpremise_redis_1                                    ... 
+Stopping sentry_onpremise_nginx_1                                    ... done
+Stopping sentry_onpremise_subscription-consumer-events_1             ... done
+Stopping sentry_onpremise_cron_1                                     ... done
+Stopping sentry_onpremise_subscription-consumer-transactions_1       ... done
+Stopping sentry_onpremise_post-process-forwarder_1                   ... done
+Stopping sentry_onpremise_ingest-consumer_1                          ... done
+Stopping sentry_onpremise_worker_1                                   ... done
+Stopping sentry_onpremise_web_1                                      ... done
+Stopping sentry_onpremise_relay_1                                    ... done
+Stopping sentry_onpremise_symbolicator-cleanup_1                     ... done
+Stopping sentry_onpremise_snuba-cleanup_1                            ... done
+Stopping sentry_onpremise_sentry-cleanup_1                           ... done
+Stopping sentry_onpremise_postgres_1                                 ... done
+Stopping sentry_onpremise_memcached_1                                ... done
+Stopping sentry_onpremise_smtp_1                                     ... done
+Stopping sentry_onpremise_symbolicator_1                             ... done
+Stopping sentry_onpremise_snuba-subscription-consumer-events_1       ... done
+Stopping sentry_onpremise_snuba-sessions-consumer_1                  ... done
+Stopping sentry_onpremise_snuba-subscription-consumer-transactions_1 ... done
+Stopping sentry_onpremise_snuba-outcomes-consumer_1                  ... done
+Stopping sentry_onpremise_snuba-transactions-consumer_1              ... done
+Stopping sentry_onpremise_snuba-consumer_1                           ... done
+Stopping sentry_onpremise_snuba-api_1                                ... done
+Stopping sentry_onpremise_snuba-replacer_1                           ... done
+Stopping sentry_onpremise_redis_1                                    ... done
+Stopping sentry_onpremise_clickhouse_1                               ... done
+Stopping sentry_onpremise_kafka_1                                    ... done
+Stopping sentry_onpremise_zookeeper_1                                ... done
+Removing sentry_onpremise_nginx_1                                    ... 
+Removing sentry_onpremise_web_1                                      ... 
+Removing sentry_onpremise_worker_1                                   ... 
+Removing sentry_onpremise_sentry-cleanup_1                           ... 
+Removing sentry_onpremise_ingest-consumer_1                          ... 
+Removing sentry_onpremise_post-process-forwarder_1                   ... 
+Removing sentry_onpremise_subscription-consumer-events_1             ... 
+Removing sentry_onpremise_subscription-consumer-transactions_1       ... 
+Removing sentry_onpremise_cron_1                                     ... 
+Removing sentry_onpremise_snuba-cleanup_1                            ... 
+Removing sentry_onpremise_relay_1                                    ... 
+Removing sentry_onpremise_geoipupdate_1                              ... 
+Removing sentry_onpremise_symbolicator-cleanup_1                     ... 
+Removing sentry_onpremise_snuba-sessions-consumer_1                  ... 
+Removing sentry_onpremise_snuba-outcomes-consumer_1                  ... 
+Removing sentry_onpremise_snuba-api_1                                ... 
+Removing sentry_onpremise_snuba-subscription-consumer-events_1       ... 
+Removing sentry_onpremise_snuba-consumer_1                           ... 
+Removing sentry_onpremise_snuba-replacer_1                           ... 
+Removing sentry_onpremise_snuba-transactions-consumer_1              ... 
+Removing sentry_onpremise_smtp_1                                     ... 
+Removing sentry_onpremise_memcached_1                                ... 
+Removing sentry_onpremise_snuba-subscription-consumer-transactions_1 ... 
+Removing sentry_onpremise_symbolicator_1                             ... 
+Removing sentry_onpremise_postgres_1                                 ... 
+Removing sentry_onpremise_kafka_1                                    ... 
+Removing sentry_onpremise_zookeeper_1                                ... 
+Removing sentry_onpremise_clickhouse_1                               ... 
+Removing sentry_onpremise_redis_1                                    ... 
+Removing sentry_onpremise_snuba-cleanup_1                            ... done
+Removing sentry_onpremise_snuba-transactions-consumer_1              ... done
+Removing sentry_onpremise_sentry-cleanup_1                           ... done
+Removing sentry_onpremise_subscription-consumer-transactions_1       ... done
+Removing sentry_onpremise_subscription-consumer-events_1             ... done
+Removing sentry_onpremise_snuba-sessions-consumer_1                  ... done
+Removing sentry_onpremise_worker_1                                   ... done
+Removing sentry_onpremise_snuba-subscription-consumer-transactions_1 ... done
+Removing sentry_onpremise_ingest-consumer_1                          ... done
+Removing sentry_onpremise_nginx_1                                    ... done
+Removing sentry_onpremise_web_1                                      ... done
+Removing sentry_onpremise_snuba-subscription-consumer-events_1       ... done
+Removing sentry_onpremise_symbolicator_1                             ... done
+Removing sentry_onpremise_cron_1                                     ... done
+Removing sentry_onpremise_memcached_1                                ... done
+Removing sentry_onpremise_postgres_1                                 ... done
+Removing sentry_onpremise_snuba-outcomes-consumer_1                  ... done
+Removing sentry_onpremise_post-process-forwarder_1                   ... done
+Removing sentry_onpremise_redis_1                                    ... done
+Removing sentry_onpremise_relay_1                                    ... done
+Removing sentry_onpremise_snuba-replacer_1                           ... done
+Removing sentry_onpremise_snuba-api_1                                ... done
+Removing sentry_onpremise_zookeeper_1                                ... done
+Removing sentry_onpremise_clickhouse_1                               ... done
+Removing sentry_onpremise_snuba-consumer_1                           ... done
+Removing sentry_onpremise_kafka_1                                    ... done
+Removing sentry_onpremise_smtp_1                                     ... done
+Removing sentry_onpremise_symbolicator-cleanup_1                     ... done
+Removing sentry_onpremise_geoipupdate_1                              ... done
+Removing network sentry_onpremise_default
+
+▶ Setting up Zookeeper ...
+--no-ansi option is deprecated and will be removed in future versions.
+Creating network "sentry_onpremise_default" with the default driver
+Creating sentry_onpremise_zookeeper_run ... 
+Creating sentry_onpremise_zookeeper_run ... done
+--no-ansi option is deprecated and will be removed in future versions.
+Creating sentry_onpremise_zookeeper_run ... 
+Creating sentry_onpremise_zookeeper_run ... done
+--no-ansi option is deprecated and will be removed in future versions.
+Creating sentry_onpremise_zookeeper_run ... 
+Creating sentry_onpremise_zookeeper_run ... done
+
+▶ Bootstrapping and migrating Snuba ...
+--no-ansi option is deprecated and will be removed in future versions.
+Creating sentry_onpremise_zookeeper_1 ... 
+Creating sentry_onpremise_clickhouse_1 ... 
+Creating sentry_onpremise_redis_1      ... 
+Creating sentry_onpremise_zookeeper_1  ... done
+Creating sentry_onpremise_kafka_1      ... 
+Creating sentry_onpremise_redis_1      ... done
+Creating sentry_onpremise_clickhouse_1 ... done
+Creating sentry_onpremise_kafka_1      ... done
+Creating sentry_onpremise_snuba-api_run ... 
+Creating sentry_onpremise_snuba-api_run ... done
+2021-04-18 05:49:11,650 Attempting to connect to Kafka (attempt 0)...
+2021-04-18 05:49:13,671 Attempting to connect to Kafka (attempt 1)...
+2021-04-18 05:49:15,677 Attempting to connect to Kafka (attempt 2)...
+2021-04-18 05:49:15,813 Connected to Kafka on attempt 2
+2021-04-18 05:49:15,970 Creating Kafka topics...
+--no-ansi option is deprecated and will be removed in future versions.
+Creating sentry_onpremise_snuba-api_run ... 
+Creating sentry_onpremise_snuba-api_run ... done
+Finished running migrations
+
+▶ Creating additional Kafka topics ...
+
+▶ Ensuring proper PostgreSQL version ...
+
+▶ Setting up database ...
+--no-ansi option is deprecated and will be removed in future versions.
+Creating sentry_onpremise_memcached_1 ... 
+Creating sentry_onpremise_postgres_1  ... 
+Creating sentry_onpremise_symbolicator_1 ... 
+Creating sentry_onpremise_smtp_1         ... 
+Creating sentry_onpremise_snuba-api_1    ... 
+Creating sentry_onpremise_snuba-outcomes-consumer_1 ... 
+Creating sentry_onpremise_snuba-subscription-consumer-events_1 ... 
+Creating sentry_onpremise_snuba-subscription-consumer-transactions_1 ... 
+Creating sentry_onpremise_snuba-sessions-consumer_1                  ... 
+Creating sentry_onpremise_snuba-replacer_1                           ... 
+Creating sentry_onpremise_snuba-transactions-consumer_1              ... 
+Creating sentry_onpremise_snuba-consumer_1                           ... 
+Creating sentry_onpremise_snuba-api_1                                ... done
+Creating sentry_onpremise_memcached_1                                ... done
+Creating sentry_onpremise_symbolicator_1                             ... done
+Creating sentry_onpremise_smtp_1                                     ... done
+Creating sentry_onpremise_postgres_1                                 ... done
+Creating sentry_onpremise_snuba-outcomes-consumer_1                  ... done
+Creating sentry_onpremise_snuba-consumer_1                           ... done
+Creating sentry_onpremise_snuba-transactions-consumer_1              ... done
+Creating sentry_onpremise_snuba-replacer_1                           ... done
+Creating sentry_onpremise_snuba-subscription-consumer-events_1       ... done
+Creating sentry_onpremise_snuba-subscription-consumer-transactions_1 ... done
+Creating sentry_onpremise_snuba-sessions-consumer_1                  ... done
+Creating sentry_onpremise_web_run                                    ... 
+Creating sentry_onpremise_web_run                                    ... done
+05:49:38 [WARNING] sentry.utils.geo: Error opening GeoIP database: /geoip/GeoLite2-City.mmdb
+05:49:38 [WARNING] sentry.utils.geo: Error opening GeoIP database in Rust: /geoip/GeoLite2-City.mmdb
+05:49:49 [INFO] sentry.plugins.github: apps-not-configured
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, jira_ac, nodestore, sentry, sessions, sites, social_auth
+Running migrations:
+  No migrations to apply.
+Creating missing DSNs
+Correcting Group.num_comments counter
+
+▶ Migrating file storage ...
+
+▶ Generating Relay credentials ...
+--no-ansi option is deprecated and will be removed in future versions.
+Creating sentry_onpremise_relay_run ... 
+Creating sentry_onpremise_relay_run ... done
+Relay credentials written to relay/credentials.json
+
+▶ Setting up GeoIP integration ...
+Setting up IP address geolocation ...
+Installing (empty) IP address geolocation database ... done.
+IP address geolocation is not configured for updates.
+See https://develop.sentry.dev/self-hosted/geolocation/ for instructions.
+Error setting up IP address geolocation.
+
+
+-----------------------------------------------------------------
+
+You're all done! Run the following command to get Sentry running:
+
+  docker-compose up -d
+
+-----------------------------------------------------------------
+
