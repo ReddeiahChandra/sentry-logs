@@ -1,0 +1,1079 @@
+Attaching to sentry_onpremise_nginx_1, sentry_onpremise_sentry-cleanup_1, sentry_onpremise_ingest-consumer_1, sentry_onpremise_subscription-consumer-transactions_1, sentry_onpremise_worker_1, sentry_onpremise_subscription-consumer-events_1, sentry_onpremise_web_1, sentry_onpremise_post-process-forwarder_1, sentry_onpremise_cron_1, sentry_onpremise_relay_1, sentry_onpremise_snuba-transactions-cleanup_1, sentry_onpremise_snuba-cleanup_1, sentry_onpremise_symbolicator-cleanup_1, sentry_onpremise_geoipupdate_1, sentry_onpremise_snuba-subscription-consumer-transactions_1, sentry_onpremise_snuba-outcomes-consumer_1, sentry_onpremise_snuba-transactions-consumer_1, sentry_onpremise_snuba-api_1, sentry_onpremise_snuba-consumer_1, sentry_onpremise_snuba-sessions-consumer_1, sentry_onpremise_snuba-subscription-consumer-events_1, sentry_onpremise_snuba-replacer_1, sentry_onpremise_symbolicator_1, sentry_onpremise_postgres_1, sentry_onpremise_smtp_1, sentry_onpremise_memcached_1, sentry_onpremise_kafka_1, sentry_onpremise_zookeeper_1, sentry_onpremise_clickhouse_1, sentry_onpremise_redis_1
+clickhouse_1                                | Processing configuration file '/etc/clickhouse-server/config.xml'.
+clickhouse_1                                | Merging configuration file '/etc/clickhouse-server/config.d/docker_related_config.xml'.
+clickhouse_1                                | Merging configuration file '/etc/clickhouse-server/config.d/sentry.xml'.
+clickhouse_1                                | Include not found: clickhouse_remote_servers
+clickhouse_1                                | Include not found: clickhouse_compression
+clickhouse_1                                | Logging information to /var/log/clickhouse-server/clickhouse-server.log
+clickhouse_1                                | Logging errors to /var/log/clickhouse-server/clickhouse-server.err.log
+clickhouse_1                                | Logging information to console
+clickhouse_1                                | 2021.04.23 08:56:53.386774 [ 1 ] {} <Information> : Starting ClickHouse 20.3.9.70 with revision 54433
+clickhouse_1                                | 2021.04.23 08:56:53.390779 [ 1 ] {} <Information> Application: starting up
+clickhouse_1                                | Include not found: networks
+clickhouse_1                                | 2021.04.23 08:56:53.402687 [ 1 ] {} <Information> Application: Uncompressed cache size was lowered to 3.89 GiB because the system has low amount of memory
+clickhouse_1                                | 2021.04.23 08:56:53.403127 [ 1 ] {} <Information> Application: Mark cache size was lowered to 3.89 GiB because the system has low amount of memory
+clickhouse_1                                | 2021.04.23 08:56:53.403312 [ 1 ] {} <Information> Application: Loading metadata from /var/lib/clickhouse/
+clickhouse_1                                | 2021.04.23 08:56:53.405905 [ 1 ] {} <Information> DatabaseOrdinary (system): Total 2 tables and 0 dictionaries.
+clickhouse_1                                | 2021.04.23 08:56:53.408936 [ 45 ] {} <Information> BackgroundProcessingPool: Create BackgroundProcessingPool with 16 threads
+clickhouse_1                                | 2021.04.23 08:56:53.518383 [ 1 ] {} <Information> DatabaseOrdinary (system): Starting up tables.
+clickhouse_1                                | 2021.04.23 08:56:53.528581 [ 1 ] {} <Information> DatabaseOrdinary (default): Total 13 tables and 0 dictionaries.
+clickhouse_1                                | 2021.04.23 08:56:53.552475 [ 1 ] {} <Information> DatabaseOrdinary (default): Starting up tables.
+clickhouse_1                                | 2021.04.23 08:56:53.554320 [ 1 ] {} <Information> BackgroundSchedulePool: Create BackgroundSchedulePool with 16 threads
+clickhouse_1                                | 2021.04.23 08:56:53.555133 [ 1 ] {} <Information> Application: It looks like the process has no CAP_NET_ADMIN capability, 'taskstats' performance statistics will be disabled. It could happen due to incorrect ClickHouse package installation. You could resolve the problem manually with 'sudo setcap cap_net_admin=+ep /usr/bin/clickhouse'. Note that it will not work on 'nosuid' mounted filesystems. It also doesn't work if you run clickhouse-server inside network namespace as it happens in some containers.
+clickhouse_1                                | 2021.04.23 08:56:53.555238 [ 1 ] {} <Information> Application: It looks like the process has no CAP_SYS_NICE capability, the setting 'os_thread_nice' will have no effect. It could happen due to incorrect ClickHouse package installation. You could resolve the problem manually with 'sudo setcap cap_sys_nice=+ep /usr/bin/clickhouse'. Note that it will not work on 'nosuid' mounted filesystems.
+clickhouse_1                                | 2021.04.23 08:56:53.556906 [ 1 ] {} <Error> Application: Listen [::]:8123 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:56:53.557817 [ 1 ] {} <Error> Application: Listen [::]:9000 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:56:53.558097 [ 1 ] {} <Error> Application: Listen [::]:9009 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:56:53.558377 [ 1 ] {} <Error> Application: Listen [::]:9004 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:56:53.558664 [ 1 ] {} <Information> Application: Listening for http://0.0.0.0:8123
+clickhouse_1                                | 2021.04.23 08:56:53.558727 [ 1 ] {} <Information> Application: Listening for connections with native protocol (tcp): 0.0.0.0:9000
+clickhouse_1                                | 2021.04.23 08:56:53.558896 [ 1 ] {} <Information> Application: Listening for replica communication (interserver): http://0.0.0.0:9009
+clickhouse_1                                | 2021.04.23 08:56:53.643424 [ 1 ] {} <Information> Application: Listening for MySQL compatibility protocol: 0.0.0.0:9004
+clickhouse_1                                | 2021.04.23 08:56:53.644217 [ 1 ] {} <Information> Application: Available RAM: 7.77 GiB; physical cores: 2; logical cores: 2.
+clickhouse_1                                | 2021.04.23 08:56:53.644369 [ 1 ] {} <Information> Application: Ready for connections.
+clickhouse_1                                | Include not found: clickhouse_remote_servers
+clickhouse_1                                | Include not found: clickhouse_compression
+clickhouse_1                                | 2021.04.23 08:57:09.905842 [ 86 ] {52b5553e-2287-4218-ae7a-953d6fd4fa11} <Information> executeQuery: Read 1 rows, 1.00 B in 0.001 sec., 1021 rows/sec., 1021.08 B/sec.
+clickhouse_1                                | 2021.04.23 08:57:09.906033 [ 86 ] {} <Information> TCPHandler: Processed in 0.001 sec.
+clickhouse_1                                | 2021.04.23 08:57:09.908194 [ 86 ] {477bf0bb-0047-484d-ba2c-916e91b1331a} <Information> executeQuery: Read 40 rows, 2.51 KiB in 0.001 sec., 31170 rows/sec., 1.91 MiB/sec.
+clickhouse_1                                | 2021.04.23 08:57:09.908385 [ 86 ] {} <Information> TCPHandler: Processed in 0.002 sec.
+clickhouse_1                                | 2021.04.23 08:57:09.940989 [ 86 ] {} <Information> TCPHandler: Done processing connection.
+clickhouse_1                                | 2021.04.23 08:57:41.829485 [ 44 ] {} <Information> Application: Received termination signal (Terminated)
+clickhouse_1                                | 2021.04.23 08:57:42.231848 [ 1 ] {} <Information> Application: Closed all listening sockets.
+clickhouse_1                                | 2021.04.23 08:57:42.232008 [ 1 ] {} <Information> Application: Closed connections.
+clickhouse_1                                | 2021.04.23 08:57:42.232531 [ 1 ] {} <Information> Application: Shutting down storages.
+clickhouse_1                                | 2021.04.23 08:57:42.640826 [ 50 ] {} <Error> system.metric_log: Cannot quickly remove directory /var/lib/clickhouse/data/system/metric_log/delete_tmp_202104_115043_115143_20 by removing files; fallback to recursive removal. Reason: Code: 458, e.displayText() = DB::ErrnoException: Cannot unlink file /var/lib/clickhouse/data/system/metric_log/delete_tmp_202104_115043_115143_20/checksums.txt, errno: 2, strerror: No such file or directory (version 20.3.9.70 (official build))
+clickhouse_1                                | 2021.04.23 08:57:42.650709 [ 50 ] {} <Information> system.metric_log: Cancelled merging parts
+clickhouse_1                                | 2021.04.23 08:57:42.653743 [ 1 ] {} <Information> Application: shutting down
+clickhouse_1                                | 2021.04.23 08:57:42.653794 [ 44 ] {} <Information> BaseDaemon: Stop SignalListener thread
+clickhouse_1                                | Processing configuration file '/etc/clickhouse-server/config.xml'.
+clickhouse_1                                | Merging configuration file '/etc/clickhouse-server/config.d/docker_related_config.xml'.
+clickhouse_1                                | Merging configuration file '/etc/clickhouse-server/config.d/sentry.xml'.
+clickhouse_1                                | Include not found: clickhouse_remote_servers
+clickhouse_1                                | Include not found: clickhouse_compression
+clickhouse_1                                | Logging information to /var/log/clickhouse-server/clickhouse-server.log
+clickhouse_1                                | Logging errors to /var/log/clickhouse-server/clickhouse-server.err.log
+clickhouse_1                                | Logging information to console
+clickhouse_1                                | 2021.04.23 08:57:48.390403 [ 1 ] {} <Information> : Starting ClickHouse 20.3.9.70 with revision 54433
+clickhouse_1                                | 2021.04.23 08:57:48.394637 [ 1 ] {} <Information> Application: starting up
+clickhouse_1                                | Include not found: networks
+clickhouse_1                                | 2021.04.23 08:57:48.417791 [ 1 ] {} <Information> Application: Uncompressed cache size was lowered to 3.89 GiB because the system has low amount of memory
+clickhouse_1                                | 2021.04.23 08:57:48.418003 [ 1 ] {} <Information> Application: Mark cache size was lowered to 3.89 GiB because the system has low amount of memory
+clickhouse_1                                | 2021.04.23 08:57:48.418035 [ 1 ] {} <Information> Application: Loading metadata from /var/lib/clickhouse/
+clickhouse_1                                | 2021.04.23 08:57:48.424884 [ 1 ] {} <Information> DatabaseOrdinary (system): Total 2 tables and 0 dictionaries.
+clickhouse_1                                | 2021.04.23 08:57:48.425878 [ 45 ] {} <Information> BackgroundProcessingPool: Create BackgroundProcessingPool with 16 threads
+clickhouse_1                                | 2021.04.23 08:57:48.509195 [ 1 ] {} <Information> DatabaseOrdinary (system): Starting up tables.
+clickhouse_1                                | 2021.04.23 08:57:48.562229 [ 1 ] {} <Information> DatabaseOrdinary (default): Total 13 tables and 0 dictionaries.
+clickhouse_1                                | 2021.04.23 08:57:48.599916 [ 1 ] {} <Information> DatabaseOrdinary (default): Starting up tables.
+clickhouse_1                                | 2021.04.23 08:57:48.607532 [ 1 ] {} <Information> BackgroundSchedulePool: Create BackgroundSchedulePool with 16 threads
+clickhouse_1                                | 2021.04.23 08:57:48.608518 [ 1 ] {} <Information> Application: It looks like the process has no CAP_NET_ADMIN capability, 'taskstats' performance statistics will be disabled. It could happen due to incorrect ClickHouse package installation. You could resolve the problem manually with 'sudo setcap cap_net_admin=+ep /usr/bin/clickhouse'. Note that it will not work on 'nosuid' mounted filesystems. It also doesn't work if you run clickhouse-server inside network namespace as it happens in some containers.
+clickhouse_1                                | 2021.04.23 08:57:48.608848 [ 1 ] {} <Information> Application: It looks like the process has no CAP_SYS_NICE capability, the setting 'os_thread_nice' will have no effect. It could happen due to incorrect ClickHouse package installation. You could resolve the problem manually with 'sudo setcap cap_sys_nice=+ep /usr/bin/clickhouse'. Note that it will not work on 'nosuid' mounted filesystems.
+clickhouse_1                                | 2021.04.23 08:57:48.610237 [ 1 ] {} <Error> Application: Listen [::]:8123 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:57:48.610545 [ 1 ] {} <Error> Application: Listen [::]:9000 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:57:48.610822 [ 1 ] {} <Error> Application: Listen [::]:9009 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:57:48.611108 [ 1 ] {} <Error> Application: Listen [::]:9004 failed: Poco::Exception. Code: 1000, e.code() = 0, e.displayText() = DNS error: EAI: -9 (version 20.3.9.70 (official build)). If it is an IPv6 or IPv4 address and your host has disabled IPv6 or IPv4, then consider to specify not disabled IPv4 or IPv6 address to listen in <listen_host> element of configuration file. Example for disabled IPv6: <listen_host>0.0.0.0</listen_host> . Example for disabled IPv4: <listen_host>::</listen_host>
+clickhouse_1                                | 2021.04.23 08:57:48.611271 [ 1 ] {} <Information> Application: Listening for http://0.0.0.0:8123
+clickhouse_1                                | 2021.04.23 08:57:48.611330 [ 1 ] {} <Information> Application: Listening for connections with native protocol (tcp): 0.0.0.0:9000
+clickhouse_1                                | 2021.04.23 08:57:48.611369 [ 1 ] {} <Information> Application: Listening for replica communication (interserver): http://0.0.0.0:9009
+clickhouse_1                                | 2021.04.23 08:57:48.848864 [ 1 ] {} <Information> Application: Listening for MySQL compatibility protocol: 0.0.0.0:9004
+clickhouse_1                                | 2021.04.23 08:57:48.849585 [ 1 ] {} <Information> Application: Available RAM: 7.77 GiB; physical cores: 2; logical cores: 2.
+clickhouse_1                                | 2021.04.23 08:57:48.849733 [ 1 ] {} <Information> Application: Ready for connections.
+clickhouse_1                                | Include not found: clickhouse_remote_servers
+clickhouse_1                                | Include not found: clickhouse_compression
+clickhouse_1                                | 2021.04.23 09:00:03.225236 [ 85 ] {39ae0de4-385d-4656-a571-f532a1c3c89b} <Information> executeQuery: Read 1 rows, 479.00 B in 0.002 sec., 457 rows/sec., 213.93 KiB/sec.
+clickhouse_1                                | 2021.04.23 09:00:03.225784 [ 85 ] {} <Information> TCPHandler: Processed in 0.003 sec.
+clickhouse_1                                | 2021.04.23 09:00:03.265788 [ 85 ] {} <Information> TCPHandler: Done processing connection.
+clickhouse_1                                | 2021.04.23 09:00:03.604702 [ 85 ] {} <Information> TCPHandler: Processed in 0.002 sec.
+clickhouse_1                                | 2021.04.23 09:00:03.639134 [ 85 ] {} <Information> TCPHandler: Done processing connection.
+clickhouse_1                                | 2021.04.23 09:05:02.806822 [ 85 ] {360bcad4-7979-4845-b6c9-62d00aa8dc5d} <Information> executeQuery: Read 1 rows, 479.00 B in 0.002 sec., 547 rows/sec., 256.01 KiB/sec.
+clickhouse_1                                | 2021.04.23 09:05:02.807139 [ 85 ] {} <Information> TCPHandler: Processed in 0.002 sec.
+clickhouse_1                                | 2021.04.23 09:05:02.844086 [ 85 ] {} <Information> TCPHandler: Done processing connection.
+clickhouse_1                                | 2021.04.23 09:05:03.237087 [ 85 ] {} <Information> TCPHandler: Processed in 0.002 sec.
+clickhouse_1                                | 2021.04.23 09:05:03.272945 [ 85 ] {} <Information> TCPHandler: Done processing connection.
+kafka_1                                     | ===> ENV Variables ...
+kafka_1                                     | ALLOW_UNSIGNED=false
+kafka_1                                     | COMPONENT=kafka
+kafka_1                                     | CONFLUENT_DEB_VERSION=1
+kafka_1                                     | CONFLUENT_PLATFORM_LABEL=
+kafka_1                                     | CONFLUENT_SUPPORT_METRICS_ENABLE=false
+kafka_1                                     | CONFLUENT_VERSION=5.5.0
+kafka_1                                     | CUB_CLASSPATH=/etc/confluent/docker/docker-utils.jar
+kafka_1                                     | HOME=/root
+kafka_1                                     | HOSTNAME=d1d93507525c
+kafka_1                                     | KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+kafka_1                                     | KAFKA_LOG4J_LOGGERS=kafka.cluster=WARN,kafka.controller=WARN,kafka.coordinator=WARN,kafka.log=WARN,kafka.server=WARN,kafka.zookeeper=WARN,state.change.logger=WARN
+kafka_1                                     | KAFKA_LOG4J_ROOT_LOGLEVEL=WARN
+kafka_1                                     | KAFKA_LOG_RETENTION_HOURS=24
+kafka_1                                     | KAFKA_MAX_REQUEST_SIZE=50000000
+kafka_1                                     | KAFKA_MESSAGE_MAX_BYTES=50000000
+kafka_1                                     | KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS=1
+kafka_1                                     | KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+kafka_1                                     | KAFKA_TOOLS_LOG4J_LOGLEVEL=WARN
+kafka_1                                     | KAFKA_VERSION=
+kafka_1                                     | KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+kafka_1                                     | LANG=C.UTF-8
+kafka_1                                     | PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+kafka_1                                     | PWD=/
+kafka_1                                     | PYTHON_PIP_VERSION=8.1.2
+kafka_1                                     | PYTHON_VERSION=2.7.9-1
+kafka_1                                     | SCALA_VERSION=2.12
+kafka_1                                     | SHLVL=1
+kafka_1                                     | ZULU_OPENJDK_VERSION=8=8.38.0.13
+kafka_1                                     | _=/usr/bin/env
+kafka_1                                     | ===> User
+kafka_1                                     | uid=0(root) gid=0(root) groups=0(root)
+kafka_1                                     | ===> Configuring ...
+kafka_1                                     | ===> Running preflight checks ...
+kafka_1                                     | ===> Check if /var/lib/kafka/data is writable ...
+kafka_1                                     | ===> Check if Zookeeper is healthy ...
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.5.7-f0fdd52973d373ffd9c86b81d99842dc2c7f660e, built on 02/10/2020 11:30 GMT
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:host.name=d1d93507525c
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_212
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Azul Systems, Inc.
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/lib/jvm/zulu-8-amd64/jre
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/etc/confluent/docker/docker-utils.jar
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.4.0-1045-aws
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.name=root
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.home=/root
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=117MB
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=1769MB
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=121MB
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=zookeeper:2181 sessionTimeout=40000 watcher=io.confluent.admin.utils.ZookeeperConnectionWatcher@cc34f4d
+kafka_1                                     | [main] INFO org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+kafka_1                                     | [main] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
+kafka_1                                     | [main] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+kafka_1                                     | [main-SendThread(zookeeper:2181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server zookeeper/172.23.0.4:2181. Will not attempt to authenticate using SASL (unknown error)
+kafka_1                                     | [main-SendThread(zookeeper:2181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /172.23.0.5:50094, server: zookeeper/172.23.0.4:2181
+kafka_1                                     | [main-SendThread(zookeeper:2181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server zookeeper/172.23.0.4:2181, sessionid = 0x100012a86c30000, negotiated timeout = 40000
+kafka_1                                     | [main-EventThread] INFO org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x100012a86c30000
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Session: 0x100012a86c30000 closed
+kafka_1                                     | ===> Launching ...
+kafka_1                                     | ===> Launching kafka ...
+kafka_1                                     | [2021-04-23 08:57:01,151] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+kafka_1                                     | [2021-04-23 08:57:01,845] WARN The package io.confluent.support.metrics.collectors.FullCollector for collecting the full set of support metrics could not be loaded, so we are reverting to anonymous, basic metric collection. If you are a Confluent customer, please refer to the Confluent Platform documentation, section Proactive Support, on how to activate full metrics collection. (io.confluent.support.metrics.KafkaSupportConfig)
+kafka_1                                     | [2021-04-23 08:57:01,845] WARN The support metrics collection feature ("Metrics") of Proactive Support is disabled. (io.confluent.support.metrics.SupportedServerStartable)
+kafka_1                                     | [2021-04-23 08:57:02,698] INFO Starting the log cleaner (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:57:02,788] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:57:03,146] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
+kafka_1                                     | [2021-04-23 08:57:03,195] INFO [SocketServer brokerId=1001] Created data-plane acceptor and processors for endpoint : EndPoint(0.0.0.0,9092,ListenerName(PLAINTEXT),PLAINTEXT) (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:57:03,197] INFO [SocketServer brokerId=1001] Started 1 acceptor threads for data-plane (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:57:03,288] INFO Creating /brokers/ids/1001 (is it secure? false) (kafka.zk.KafkaZkClient)
+kafka_1                                     | [2021-04-23 08:57:03,309] INFO Stat of the created znode at /brokers/ids/1001 is: 1846,1846,1619168223300,1619168223300,1,0,0,72058876199108609,180,0,1846
+kafka_1                                     |  (kafka.zk.KafkaZkClient)
+kafka_1                                     | [2021-04-23 08:57:03,309] INFO Registered broker 1001 at path /brokers/ids/1001 with addresses: ArrayBuffer(EndPoint(kafka,9092,ListenerName(PLAINTEXT),PLAINTEXT)), czxid (broker epoch): 1846 (kafka.zk.KafkaZkClient)
+kafka_1                                     | [2021-04-23 08:57:03,818] INFO [/config/changes-event-process-thread]: Starting (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka_1                                     | [2021-04-23 08:57:03,888] INFO [SocketServer brokerId=1001] Started data-plane processors for 1 acceptors (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:57:41,864] INFO [/config/changes-event-process-thread]: Shutting down (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka_1                                     | [2021-04-23 08:57:41,889] INFO [/config/changes-event-process-thread]: Stopped (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka_1                                     | [2021-04-23 08:57:41,889] INFO [/config/changes-event-process-thread]: Shutdown completed (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka_1                                     | [2021-04-23 08:57:41,890] INFO [SocketServer brokerId=1001] Stopping socket server request processors (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:57:41,901] INFO [SocketServer brokerId=1001] Stopped socket server request processors (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:57:42,757] INFO Shutting down the log cleaner. (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:57:42,757] INFO [kafka-log-cleaner-thread-0]: Shutting down (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:57:42,758] INFO [kafka-log-cleaner-thread-0]: Stopped (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:57:42,758] INFO [kafka-log-cleaner-thread-0]: Shutdown completed (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:57:44,392] INFO [SocketServer brokerId=1001] Shutting down socket server (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:57:44,436] INFO [SocketServer brokerId=1001] Shutdown completed (kafka.network.SocketServer)
+kafka_1                                     | ===> ENV Variables ...
+kafka_1                                     | ALLOW_UNSIGNED=false
+kafka_1                                     | COMPONENT=kafka
+kafka_1                                     | CONFLUENT_DEB_VERSION=1
+kafka_1                                     | CONFLUENT_PLATFORM_LABEL=
+kafka_1                                     | CONFLUENT_SUPPORT_METRICS_ENABLE=false
+kafka_1                                     | CONFLUENT_VERSION=5.5.0
+kafka_1                                     | CUB_CLASSPATH=/etc/confluent/docker/docker-utils.jar
+kafka_1                                     | HOME=/root
+kafka_1                                     | HOSTNAME=d1d93507525c
+kafka_1                                     | KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+kafka_1                                     | KAFKA_LOG4J_LOGGERS=kafka.cluster=WARN,kafka.controller=WARN,kafka.coordinator=WARN,kafka.log=WARN,kafka.server=WARN,kafka.zookeeper=WARN,state.change.logger=WARN
+kafka_1                                     | KAFKA_LOG4J_ROOT_LOGLEVEL=WARN
+kafka_1                                     | KAFKA_LOG_RETENTION_HOURS=24
+kafka_1                                     | KAFKA_MAX_REQUEST_SIZE=50000000
+kafka_1                                     | KAFKA_MESSAGE_MAX_BYTES=50000000
+kafka_1                                     | KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS=1
+kafka_1                                     | KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+kafka_1                                     | KAFKA_TOOLS_LOG4J_LOGLEVEL=WARN
+kafka_1                                     | KAFKA_VERSION=
+kafka_1                                     | KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+kafka_1                                     | LANG=C.UTF-8
+kafka_1                                     | PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+kafka_1                                     | PWD=/
+kafka_1                                     | PYTHON_PIP_VERSION=8.1.2
+kafka_1                                     | PYTHON_VERSION=2.7.9-1
+kafka_1                                     | SCALA_VERSION=2.12
+kafka_1                                     | SHLVL=1
+kafka_1                                     | ZULU_OPENJDK_VERSION=8=8.38.0.13
+kafka_1                                     | _=/usr/bin/env
+kafka_1                                     | ===> User
+kafka_1                                     | uid=0(root) gid=0(root) groups=0(root)
+kafka_1                                     | ===> Configuring ...
+kafka_1                                     | ===> Running preflight checks ...
+kafka_1                                     | ===> Check if /var/lib/kafka/data is writable ...
+kafka_1                                     | ===> Check if Zookeeper is healthy ...
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.5.7-f0fdd52973d373ffd9c86b81d99842dc2c7f660e, built on 02/10/2020 11:30 GMT
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:host.name=d1d93507525c
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_212
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Azul Systems, Inc.
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/lib/jvm/zulu-8-amd64/jre
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/etc/confluent/docker/docker-utils.jar
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.4.0-1045-aws
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.name=root
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.home=/root
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=117MB
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=1769MB
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=121MB
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=zookeeper:2181 sessionTimeout=40000 watcher=io.confluent.admin.utils.ZookeeperConnectionWatcher@cc34f4d
+kafka_1                                     | [main] INFO org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+kafka_1                                     | [main] INFO org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 4194304 Bytes
+kafka_1                                     | [main] INFO org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+kafka_1                                     | [main-SendThread(zookeeper:2181)] INFO org.apache.zookeeper.ClientCnxn - Opening socket connection to server zookeeper/172.23.0.7:2181. Will not attempt to authenticate using SASL (unknown error)
+kafka_1                                     | [main-SendThread(zookeeper:2181)] INFO org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /172.23.0.11:55200, server: zookeeper/172.23.0.7:2181
+kafka_1                                     | [main-SendThread(zookeeper:2181)] INFO org.apache.zookeeper.ClientCnxn - Session establishment complete on server zookeeper/172.23.0.7:2181, sessionid = 0x100012bc5d40000, negotiated timeout = 40000
+kafka_1                                     | [main] INFO org.apache.zookeeper.ZooKeeper - Session: 0x100012bc5d40000 closed
+kafka_1                                     | [main-EventThread] INFO org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x100012bc5d40000
+cron_1                                      | 08:58:33 [INFO] sentry.plugins.github: apps-not-configured
+ingest-consumer_1                           | 08:58:33 [INFO] sentry.plugins.github: apps-not-configured
+ingest-consumer_1                           | %3|1619168315.044|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT)
+ingest-consumer_1                           | %3|1619168316.045|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+ingest-consumer_1                           | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'ingest-transactions' or its partitions are not ready, retrying...
+ingest-consumer_1                           | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'ingest-transactions' or its partitions are not ready, retrying...
+ingest-consumer_1                           | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'ingest-transactions' or its partitions are not ready, retrying...
+ingest-consumer_1                           | Traceback (most recent call last):
+ingest-consumer_1                           |   File "/usr/local/bin/sentry", line 8, in <module>
+ingest-consumer_1                           |     sys.exit(main())
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/__init__.py", line 195, in main
+ingest-consumer_1                           |     func(**kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+ingest-consumer_1                           |     return self.main(*args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 782, in main
+ingest-consumer_1                           |     rv = self.invoke(ctx)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+ingest-consumer_1                           |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+ingest-consumer_1                           |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+ingest-consumer_1                           |     return ctx.invoke(self.callback, **ctx.params)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+ingest-consumer_1                           |     return callback(*args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+ingest-consumer_1                           |     return f(get_current_context(), *args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 69, in inner
+ingest-consumer_1                           |     return ctx.invoke(f, *args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+ingest-consumer_1                           |     return callback(*args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+ingest-consumer_1                           |     return f(get_current_context(), *args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 29, in inner
+ingest-consumer_1                           |     return ctx.invoke(f, *args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+ingest-consumer_1                           |     return callback(*args, **kwargs)
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/commands/run.py", line 503, in ingest_consumer
+ingest-consumer_1                           |     get_ingest_consumer(consumer_types=consumer_types, **options).run()
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/sentry/utils/batching_kafka_consumer.py", line 256, in run
+ingest-consumer_1                           |     self._run_once()
+ingest-consumer_1                           |   File "/usr/local/lib/python3.6/site-packages/sentry/utils/batching_kafka_consumer.py", line 274, in _run_once
+ingest-consumer_1                           |     raise Exception(msg.error())
+ingest-consumer_1                           | Exception: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+ingest-consumer_1                           | 08:59:12 [INFO] sentry.plugins.github: apps-not-configured
+ingest-consumer_1                           | 08:59:15 [INFO] batching-kafka-consumer: New partitions assigned: [TopicPartition{topic=ingest-attachments,partition=0,offset=-1001,error=None}, TopicPartition{topic=ingest-events,partition=0,offset=-1001,error=None}, TopicPartition{topic=ingest-transactions,partition=0,offset=-1001,error=None}]
+kafka_1                                     | ===> Launching ...
+kafka_1                                     | ===> Launching kafka ...
+kafka_1                                     | [2021-04-23 08:58:31,265] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+kafka_1                                     | [2021-04-23 08:58:34,595] WARN The package io.confluent.support.metrics.collectors.FullCollector for collecting the full set of support metrics could not be loaded, so we are reverting to anonymous, basic metric collection. If you are a Confluent customer, please refer to the Confluent Platform documentation, section Proactive Support, on how to activate full metrics collection. (io.confluent.support.metrics.KafkaSupportConfig)
+kafka_1                                     | [2021-04-23 08:58:34,595] WARN The support metrics collection feature ("Metrics") of Proactive Support is disabled. (io.confluent.support.metrics.SupportedServerStartable)
+kafka_1                                     | [2021-04-23 08:58:37,435] INFO Starting the log cleaner (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:58:37,594] INFO [kafka-log-cleaner-thread-0]: Starting (kafka.log.LogCleaner)
+kafka_1                                     | [2021-04-23 08:58:38,350] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
+kafka_1                                     | [2021-04-23 08:58:38,439] INFO [SocketServer brokerId=1001] Created data-plane acceptor and processors for endpoint : EndPoint(0.0.0.0,9092,ListenerName(PLAINTEXT),PLAINTEXT) (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:58:38,440] INFO [SocketServer brokerId=1001] Started 1 acceptor threads for data-plane (kafka.network.SocketServer)
+kafka_1                                     | [2021-04-23 08:58:38,709] INFO Creating /brokers/ids/1001 (is it secure? false) (kafka.zk.KafkaZkClient)
+kafka_1                                     | [2021-04-23 08:58:38,735] INFO Stat of the created znode at /brokers/ids/1001 is: 1867,1867,1619168318728,1619168318728,1,0,0,72058881552154625,180,0,1867
+kafka_1                                     |  (kafka.zk.KafkaZkClient)
+kafka_1                                     | [2021-04-23 08:58:38,736] INFO Registered broker 1001 at path /brokers/ids/1001 with addresses: ArrayBuffer(EndPoint(kafka,9092,ListenerName(PLAINTEXT),PLAINTEXT)), czxid (broker epoch): 1867 (kafka.zk.KafkaZkClient)
+kafka_1                                     | [2021-04-23 08:58:39,604] INFO [/config/changes-event-process-thread]: Starting (kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread)
+kafka_1                                     | [2021-04-23 08:58:39,800] INFO [SocketServer brokerId=1001] Started data-plane processors for 1 acceptors (kafka.network.SocketServer)
+geoipupdate_1                               | error loading configuration file /sentry/GeoIP.conf: error opening file: open /sentry/GeoIP.conf: no such file or directory
+memcached_1                                 | Signal handled: Terminated.
+nginx_1                                     | 2021/04/23 08:58:02 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.2.59, server: , request: "GET / HTTP/1.1", upstream: "http://172.23.0.24:9000/", host: "172.31.37.190:9000"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:08:58:02 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 2021/04/23 08:58:02 [error] 8#8: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.26.9, server: , request: "GET / HTTP/1.1", upstream: "http://172.23.0.24:9000/", host: "172.31.37.190:9000"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:08:58:02 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 2021/04/23 08:58:29 [error] 8#8: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.46.216, server: , request: "GET / HTTP/1.1", upstream: "http://172.23.0.24:9000/", host: "172.31.37.190:9000"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:08:58:29 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 2021/04/23 08:58:29 [error] 8#8: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.2.59, server: , request: "GET / HTTP/1.1", upstream: "http://172.23.0.24:9000/", host: "172.31.37.190:9000"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:08:58:29 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 2021/04/23 08:58:29 [error] 8#8: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.26.9, server: , request: "GET / HTTP/1.1", upstream: "http://172.23.0.24:9000/", host: "172.31.37.190:9000"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:08:58:29 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:08:59:04 +0000] "GET / HTTP/1.1" 499 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:08:59:04 +0000] "GET / HTTP/1.1" 499 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:08:59:04 +0000] "GET / HTTP/1.1" 499 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:08:59:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:08:59:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:08:59:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:08:59:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:08:59:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:08:59:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:00:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:00:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:00:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:00:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:00:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:00:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:01:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:01:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:01:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:01:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:01:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:01:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:02:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:02:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:02:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:02:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:02:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:03:00 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:03:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:03:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:03:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:03:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:03:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:04:00 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:04:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:04:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:04:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:04:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:04:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:05:00 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:05:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:05:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:05:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:05:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:05:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:06:00 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:06:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:06:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:06:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:06:59 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:07:00 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:07:00 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.46.216 - - [23/Apr/2021:09:07:29 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.2.59 - - [23/Apr/2021:09:07:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+nginx_1                                     | 172.31.26.9 - - [23/Apr/2021:09:07:30 +0000] "GET / HTTP/1.1" 302 0 "-" "ELB-HealthChecker/2.0" "-"
+postgres_1                                  |
+postgres_1                                  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres_1                                  |
+postgres_1                                  | LOG:  database system was shut down at 2021-04-23 08:56:40 UTC
+postgres_1                                  | LOG:  MultiXact member wraparound protections are now enabled
+postgres_1                                  | LOG:  database system is ready to accept connections
+postgres_1                                  | LOG:  autovacuum launcher started
+postgres_1                                  | ERROR:  relation "south_migrationhistory" does not exist at character 15
+postgres_1                                  | STATEMENT:  SELECT 1 FROM south_migrationhistory LIMIT 1
+postgres_1                                  | LOG:  received fast shutdown request
+postgres_1                                  | LOG:  aborting any active transactions
+postgres_1                                  | LOG:  autovacuum launcher shutting down
+postgres_1                                  | LOG:  shutting down
+postgres_1                                  | LOG:  database system is shut down
+postgres_1                                  |
+postgres_1                                  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+postgres_1                                  |
+postgres_1                                  | LOG:  database system was shut down at 2021-04-23 08:57:40 UTC
+postgres_1                                  | LOG:  MultiXact member wraparound protections are now enabled
+postgres_1                                  | LOG:  database system is ready to accept connections
+postgres_1                                  | LOG:  autovacuum launcher started
+redis_1                                     | 1:C 23 Apr 2021 08:56:53.117 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis_1                                     | 1:C 23 Apr 2021 08:56:53.117 # Redis version=5.0.12, bits=64, commit=00000000, modified=0, pid=1, just started
+redis_1                                     | 1:C 23 Apr 2021 08:56:53.117 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis_1                                     | 1:M 23 Apr 2021 08:56:53.119 * Running mode=standalone, port=6379.
+redis_1                                     | 1:M 23 Apr 2021 08:56:53.119 # Server initialized
+redis_1                                     | 1:M 23 Apr 2021 08:56:53.119 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis_1                                     | 1:M 23 Apr 2021 08:56:53.119 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+redis_1                                     | 1:M 23 Apr 2021 08:56:53.166 * DB loaded from disk: 0.047 seconds
+redis_1                                     | 1:M 23 Apr 2021 08:56:53.166 * Ready to accept connections
+redis_1                                     | 1:signal-handler (1619168261) Received SIGTERM scheduling shutdown...
+redis_1                                     | 1:M 23 Apr 2021 08:57:41.865 # User requested shutdown...
+redis_1                                     | 1:M 23 Apr 2021 08:57:41.865 * Saving the final RDB snapshot before exiting.
+redis_1                                     | 1:M 23 Apr 2021 08:57:41.898 * DB saved on disk
+redis_1                                     | 1:M 23 Apr 2021 08:57:41.898 # Redis is now ready to exit, bye bye...
+redis_1                                     | 1:C 23 Apr 2021 08:57:48.792 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis_1                                     | 1:C 23 Apr 2021 08:57:48.792 # Redis version=5.0.12, bits=64, commit=00000000, modified=0, pid=1, just started
+redis_1                                     | 1:C 23 Apr 2021 08:57:48.792 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis_1                                     | 1:M 23 Apr 2021 08:57:48.794 * Running mode=standalone, port=6379.
+redis_1                                     | 1:M 23 Apr 2021 08:57:48.794 # Server initialized
+redis_1                                     | 1:M 23 Apr 2021 08:57:48.794 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis_1                                     | 1:M 23 Apr 2021 08:57:48.794 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+redis_1                                     | 1:M 23 Apr 2021 08:57:48.854 * DB loaded from disk: 0.060 seconds
+redis_1                                     | 1:M 23 Apr 2021 08:57:48.854 * Ready to accept connections
+redis_1                                     | 1:M 23 Apr 2021 09:02:49.080 * 100 changes in 300 seconds. Saving...
+redis_1                                     | 1:M 23 Apr 2021 09:02:49.081 * Background saving started by pid 14
+redis_1                                     | 14:C 23 Apr 2021 09:02:49.108 * DB saved on disk
+redis_1                                     | 14:C 23 Apr 2021 09:02:49.109 * RDB: 0 MB of memory used by copy-on-write
+redis_1                                     | 1:M 23 Apr 2021 09:02:49.182 * Background saving terminated with success
+redis_1                                     | 1:M 23 Apr 2021 09:07:50.029 * 100 changes in 300 seconds. Saving...
+redis_1                                     | 1:M 23 Apr 2021 09:07:50.029 * Background saving started by pid 15
+redis_1                                     | 15:C 23 Apr 2021 09:07:50.049 * DB saved on disk
+redis_1                                     | 15:C 23 Apr 2021 09:07:50.049 * RDB: 0 MB of memory used by copy-on-write
+redis_1                                     | 1:M 23 Apr 2021 09:07:50.129 * Background saving terminated with success
+relay_1                                     | 2021-04-23T08:57:56Z [rdkafka::client] ERROR: librdkafka: FAIL [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 6ms in state CONNECT)
+relay_1                                     | 2021-04-23T08:57:56Z [rdkafka::client] ERROR: librdkafka: Global error: BrokerTransportFailure (Local: Broker transport failure): kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 6ms in state CONNECT)
+relay_1                                     | 2021-04-23T08:57:56Z [rdkafka::client] ERROR: librdkafka: Global error: AllBrokersDown (Local: All broker connections are down): 1/1 brokers are down
+relay_1                                     | 2021-04-23T08:57:57Z [rdkafka::client] ERROR: librdkafka: FAIL [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 20ms in state CONNECT)
+relay_1                                     | 2021-04-23T08:57:57Z [rdkafka::client] ERROR: librdkafka: Global error: BrokerTransportFailure (Local: Broker transport failure): kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 20ms in state CONNECT)
+relay_1                                     | 2021-04-23T08:57:57Z [rdkafka::client] ERROR: librdkafka: Global error: AllBrokersDown (Local: All broker connections are down): 1/1 brokers are down
+relay_1                                     | 2021-04-23T08:57:57Z [actix::actors::resolver] WARN: Can not create system dns resolver: io error
+relay_1                                     | 2021-04-23T08:57:57Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: dns error: no record found for name: web.ap-south-1.compute.internal. type: AAAA class: IN
+relay_1                                     | 2021-04-23T08:57:57Z [rdkafka::client] ERROR: librdkafka: FAIL [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:57:57Z [rdkafka::client] ERROR: librdkafka: Global error: BrokerTransportFailure (Local: Broker transport failure): kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:57:58Z [rdkafka::client] ERROR: librdkafka: FAIL [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:57:58Z [rdkafka::client] ERROR: librdkafka: Global error: BrokerTransportFailure (Local: Broker transport failure): kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:58:00Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: operation timed out
+relay_1                                     | 2021-04-23T08:58:01Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:02Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:05Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:08Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 0ns
+relay_1                                     | 2021-04-23T08:58:08Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:08Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 1s
+relay_1                                     | 2021-04-23T08:58:09Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 1.5s
+relay_1                                     | 2021-04-23T08:58:11Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 2.25s
+relay_1                                     | 2021-04-23T08:58:13Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 3.375s
+relay_1                                     | 2021-04-23T08:58:13Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:16Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 5.0625s
+relay_1                                     | 2021-04-23T08:58:21Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:21Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 7.59375s
+relay_1                                     | 2021-04-23T08:58:27Z [rdkafka::client] ERROR: librdkafka: FAIL [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 30 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:58:27Z [rdkafka::client] ERROR: librdkafka: Global error: BrokerTransportFailure (Local: Broker transport failure): kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 30 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:58:28Z [rdkafka::client] ERROR: librdkafka: FAIL [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 30 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:58:28Z [rdkafka::client] ERROR: librdkafka: Global error: BrokerTransportFailure (Local: Broker transport failure): kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 30 identical error(s) suppressed)
+relay_1                                     | 2021-04-23T08:58:29Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 11.390625s
+relay_1                                     | 2021-04-23T08:58:32Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): error trying to connect: tcp connect error: Connection refused (os error 111)
+relay_1                                     | 2021-04-23T08:58:45Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 17.0859375s
+relay_1                                     | 2021-04-23T08:58:54Z [relay_server::actors::upstream] ERROR: authentication encountered error: could not send request to upstream
+relay_1                                     |   caused by: error sending request for url (http://web:9000/api/0/relays/register/challenge/): operation timed out
+relay_1                                     | 2021-04-23T08:59:07Z [relay_server::actors::upstream] WARN: Network outage, scheduling another check in 25.62890625s
+post-process-forwarder_1                    | 08:58:32 [INFO] sentry.plugins.github: apps-not-configured
+post-process-forwarder_1                    | %3|1619168314.129|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 4ms in state CONNECT)
+post-process-forwarder_1                    | %3|1619168314.139|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 8ms in state CONNECT)
+post-process-forwarder_1                    | %3|1619168315.125|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+post-process-forwarder_1                    | %3|1619168315.131|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+post-process-forwarder_1                    | Traceback (most recent call last):
+post-process-forwarder_1                    |   File "/usr/local/bin/sentry", line 8, in <module>
+post-process-forwarder_1                    |     sys.exit(main())
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/__init__.py", line 195, in main
+post-process-forwarder_1                    |     func(**kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+post-process-forwarder_1                    |     return self.main(*args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 782, in main
+post-process-forwarder_1                    |     rv = self.invoke(ctx)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+post-process-forwarder_1                    |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+post-process-forwarder_1                    |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+post-process-forwarder_1                    |     return ctx.invoke(self.callback, **ctx.params)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+post-process-forwarder_1                    |     return callback(*args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+post-process-forwarder_1                    |     return f(get_current_context(), *args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 69, in inner
+post-process-forwarder_1                    |     return ctx.invoke(f, *args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+post-process-forwarder_1                    |     return callback(*args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+post-process-forwarder_1                    |     return f(get_current_context(), *args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 29, in inner
+post-process-forwarder_1                    |     return ctx.invoke(f, *args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+post-process-forwarder_1                    |     return callback(*args, **kwargs)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/commands/run.py", line 333, in post_process_forwarder
+post-process-forwarder_1                    |     initial_offset_reset=options["initial_offset_reset"],
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/sentry/utils/services.py", line 102, in <lambda>
+post-process-forwarder_1                    |     context[key] = (lambda f: lambda *a, **k: getattr(self, f)(*a, **k))(key)
+post-process-forwarder_1                    |   File "/usr/local/lib/python3.6/site-packages/sentry/eventstream/kafka/backend.py", line 203, in run_post_process_forwarder
+post-process-forwarder_1                    |     raise Exception(error)
+post-process-forwarder_1                    | Exception: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+post-process-forwarder_1                    | 08:59:11 [INFO] sentry.plugins.github: apps-not-configured
+post-process-forwarder_1                    | 08:59:15 [INFO] sentry.eventstream.kafka.backend: Received partition assignment: [TopicPartition{topic=events,partition=0,offset=-1001,error=None}]
+sentry-cleanup_1                            | SHELL=/bin/bash
+sentry-cleanup_1                            | BASH_ENV=/container.env
+sentry-cleanup_1                            | 0 0 * * * gosu sentry sentry cleanup --days 90 > /proc/1/fd/1 2>/proc/1/fd/2
+smtp_1                                      | + sed -ri '
+smtp_1                                      |   s/^#?(dc_local_interfaces)=.*/\1='\''0.0.0.0 ; ::0'\''/;
+smtp_1                                      |   s/^#?(dc_other_hostnames)=.*/\1='\'''\''/;
+smtp_1                                      |   s/^#?(dc_relay_nets)=.*/\1='\''0.0.0.0\/0'\''/;
+smtp_1                                      |   s/^#?(dc_eximconfig_configtype)=.*/\1='\''internet'\''/;
+smtp_1                                      | ' /etc/exim4/update-exim4.conf.conf
+smtp_1                                      | + update-exim4.conf -v
+smtp_1                                      | using non-split configuration scheme from /etc/exim4/exim4.conf.template
+smtp_1                                      |   271 LOG: MAIN
+smtp_1                                      |   271   exim 4.92 daemon started: pid=271, no queue runs, listening for SMTP on port 25 (IPv6 and IPv4)
+smtp_1                                      | + sed -ri '
+smtp_1                                      |   s/^#?(dc_local_interfaces)=.*/\1='\''0.0.0.0 ; ::0'\''/;
+smtp_1                                      |   s/^#?(dc_other_hostnames)=.*/\1='\'''\''/;
+smtp_1                                      |   s/^#?(dc_relay_nets)=.*/\1='\''0.0.0.0\/0'\''/;
+smtp_1                                      |   s/^#?(dc_eximconfig_configtype)=.*/\1='\''internet'\''/;
+smtp_1                                      | ' /etc/exim4/update-exim4.conf.conf
+smtp_1                                      | + update-exim4.conf -v
+smtp_1                                      | using non-split configuration scheme from /etc/exim4/exim4.conf.template
+smtp_1                                      |   270 LOG: MAIN
+smtp_1                                      |   270   exim 4.92 daemon started: pid=270, no queue runs, listening for SMTP on port 25 (IPv6 and IPv4)
+snuba-consumer_1                            | 2021-04-23 08:57:37,058 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
+snuba-consumer_1                            | 2021-04-23 08:57:40,425 Partitions revoked: [Partition(topic=Topic(name='events'), index=0)]
+snuba-consumer_1                            | %3|1619168305.670|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 12ms in state CONNECT)
+snuba-consumer_1                            | %3|1619168305.672|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 1ms in state CONNECT)
+snuba-consumer_1                            | %3|1619168306.668|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-consumer_1                            | %3|1619168306.670|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-consumer_1                            | 2021-04-23 08:58:40,712 Caught ConsumerError('KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}'), shutting down...
+snuba-consumer_1                            | Traceback (most recent call last):
+snuba-consumer_1                            |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-consumer_1                            |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-consumer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-consumer_1                            |     return self.main(*args, **kwargs)
+snuba-consumer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-consumer_1                            |     rv = self.invoke(ctx)
+snuba-consumer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-consumer_1                            |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-consumer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-consumer_1                            |     return ctx.invoke(self.callback, **ctx.params)
+snuba-consumer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-consumer_1                            |     return callback(*args, **kwargs)
+snuba-consumer_1                            |   File "/usr/src/snuba/snuba/cli/consumer.py", line 161, in consumer
+snuba-consumer_1                            |     consumer.run()
+snuba-consumer_1                            |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 112, in run
+snuba-consumer_1                            |     self._run_once()
+snuba-consumer_1                            |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 142, in _run_once
+snuba-consumer_1                            |     self.__message = self.__consumer.poll(timeout=1.0)
+snuba-consumer_1                            |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 773, in poll
+snuba-consumer_1                            |     return super().poll(timeout)
+snuba-consumer_1                            |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-consumer_1                            |     raise ConsumerError(str(error))
+snuba-consumer_1                            | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-consumer_1                            | 2021-04-23 08:59:05,528 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
+snuba-consumer_1                            | 2021-04-23 08:59:08,534 Partitions revoked: [Partition(topic=Topic(name='events'), index=0)]
+snuba-consumer_1                            | 2021-04-23 08:59:08,576 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
+snuba-api_1                                 | *** Starting uWSGI 2.0.18 (64bit) on [Fri Apr 23 08:57:34 2021] ***
+snuba-api_1                                 | compiled with version: 8.3.0 on 20 April 2021 19:17:00
+snuba-api_1                                 | os: Linux-5.4.0-1045-aws #47-Ubuntu SMP Tue Apr 13 07:02:25 UTC 2021
+snuba-api_1                                 | nodename: 4cc8b84b2b52
+snuba-api_1                                 | machine: x86_64
+snuba-api_1                                 | clock source: unix
+snuba-api_1                                 | pcre jit disabled
+snuba-api_1                                 | detected number of CPU cores: 2
+snuba-api_1                                 | current working directory: /usr/src/snuba
+snuba-api_1                                 | detected binary path: /usr/local/bin/uwsgi
+snuba-api_1                                 | your memory page size is 4096 bytes
+snuba-api_1                                 | detected max file descriptor number: 1048576
+snuba-api_1                                 | lock engine: pthread robust mutexes
+snuba-api_1                                 | thunder lock: enabled
+snuba-api_1                                 | uwsgi socket 0 bound to TCP address 0.0.0.0:1218 fd 3
+snuba-api_1                                 | Python version: 3.8.9 (default, Apr 10 2021, 15:55:09)  [GCC 8.3.0]
+snuba-api_1                                 | Set PythonHome to /usr/local
+snuba-api_1                                 | Python main interpreter initialized at 0x55907d222ad0
+snuba-api_1                                 | python threads support enabled
+snuba-api_1                                 | your server socket listen backlog is limited to 100 connections
+snuba-api_1                                 | your mercy for graceful operations on workers is 60 seconds
+snuba-api_1                                 | mapped 145808 bytes (142 KB) for 1 cores
+snuba-api_1                                 | *** Operational MODE: single process ***
+snuba-api_1                                 | initialized 38 metrics
+snuba-api_1                                 | spawned uWSGI master process (pid: 1)
+snuba-api_1                                 | spawned uWSGI worker 1 (pid: 15, cores: 1)
+snuba-api_1                                 | metrics collector thread started
+snuba-api_1                                 | WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55907d222ad0 pid: 15 (default app)
+snuba-api_1                                 | SIGINT/SIGQUIT received...killing workers...
+snuba-api_1                                 | worker 1 buried after 1 seconds
+snuba-api_1                                 | goodbye to uWSGI.
+snuba-api_1                                 | *** Starting uWSGI 2.0.18 (64bit) on [Fri Apr 23 08:58:25 2021] ***
+snuba-api_1                                 | compiled with version: 8.3.0 on 20 April 2021 19:17:00
+snuba-api_1                                 | os: Linux-5.4.0-1045-aws #47-Ubuntu SMP Tue Apr 13 07:02:25 UTC 2021
+snuba-api_1                                 | nodename: 4cc8b84b2b52
+snuba-api_1                                 | machine: x86_64
+snuba-api_1                                 | clock source: unix
+snuba-api_1                                 | pcre jit disabled
+snuba-api_1                                 | detected number of CPU cores: 2
+snuba-api_1                                 | current working directory: /usr/src/snuba
+snuba-api_1                                 | detected binary path: /usr/local/bin/uwsgi
+snuba-api_1                                 | your memory page size is 4096 bytes
+snuba-api_1                                 | detected max file descriptor number: 1048576
+snuba-api_1                                 | lock engine: pthread robust mutexes
+snuba-api_1                                 | thunder lock: enabled
+snuba-api_1                                 | uwsgi socket 0 bound to TCP address 0.0.0.0:1218 fd 3
+snuba-api_1                                 | Python version: 3.8.9 (default, Apr 10 2021, 15:55:09)  [GCC 8.3.0]
+snuba-api_1                                 | Set PythonHome to /usr/local
+snuba-api_1                                 | Python main interpreter initialized at 0x55b878174ad0
+snuba-api_1                                 | python threads support enabled
+snuba-api_1                                 | your server socket listen backlog is limited to 100 connections
+snuba-api_1                                 | your mercy for graceful operations on workers is 60 seconds
+snuba-api_1                                 | mapped 145808 bytes (142 KB) for 1 cores
+snuba-api_1                                 | *** Operational MODE: single process ***
+snuba-api_1                                 | initialized 38 metrics
+snuba-api_1                                 | spawned uWSGI master process (pid: 1)
+snuba-api_1                                 | spawned uWSGI worker 1 (pid: 14, cores: 1)
+snuba-api_1                                 | metrics collector thread started
+snuba-api_1                                 | WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x55b878174ad0 pid: 14 (default app)
+snuba-replacer_1                            | 2021-04-23 08:57:35,240 New partitions assigned: {Partition(topic=Topic(name='event-replacements'), index=0): 0}
+snuba-replacer_1                            | 2021-04-23 08:57:40,754 Partitions revoked: [Partition(topic=Topic(name='event-replacements'), index=0)]
+snuba-replacer_1                            | %3|1619168304.102|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 1ms in state CONNECT)
+snuba-replacer_1                            | %3|1619168305.103|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-replacer_1                            | 2021-04-23 08:58:41,237 Caught ConsumerError('KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}'), shutting down...
+snuba-replacer_1                            | Traceback (most recent call last):
+snuba-replacer_1                            |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-replacer_1                            |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-replacer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-replacer_1                            |     return self.main(*args, **kwargs)
+snuba-replacer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-replacer_1                            |     rv = self.invoke(ctx)
+snuba-replacer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-replacer_1                            |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-replacer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-replacer_1                            |     return ctx.invoke(self.callback, **ctx.params)
+snuba-replacer_1                            |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-replacer_1                            |     return callback(*args, **kwargs)
+snuba-replacer_1                            |   File "/usr/src/snuba/snuba/cli/replacer.py", line 133, in replacer
+snuba-replacer_1                            |     replacer.run()
+snuba-replacer_1                            |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 112, in run
+snuba-replacer_1                            |     self._run_once()
+snuba-replacer_1                            |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 142, in _run_once
+snuba-replacer_1                            |     self.__message = self.__consumer.poll(timeout=1.0)
+snuba-replacer_1                            |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-replacer_1                            |     raise ConsumerError(str(error))
+snuba-replacer_1                            | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-replacer_1                            | 2021-04-23 08:59:10,254 New partitions assigned: {Partition(topic=Topic(name='event-replacements'), index=0): 0}
+snuba-cleanup_1                             | SHELL=/bin/bash
+snuba-cleanup_1                             | BASH_ENV=/container.env
+snuba-cleanup_1                             | */5 * * * * gosu snuba snuba cleanup --storage errors --dry-run False > /proc/1/fd/1 2>/proc/1/fd/2
+snuba-cleanup_1                             | 2021-04-23 09:00:03,227 Dropped 0 partitions on clickhouse:9000
+snuba-cleanup_1                             | 2021-04-23 09:05:02,809 Dropped 0 partitions on clickhouse:9000
+snuba-subscription-consumer-events_1        | %3|1619168305.920|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 7ms in state CONNECT)
+snuba-subscription-consumer-events_1        | %3|1619168306.892|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT)
+snuba-subscription-consumer-events_1        | %3|1619168306.912|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-subscription-consumer-events_1        | %3|1619168307.892|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-subscription-consumer-events_1        | Traceback (most recent call last):
+snuba-subscription-consumer-events_1        |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-subscription-consumer-events_1        |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-subscription-consumer-events_1        |     return self.main(*args, **kwargs)
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-subscription-consumer-events_1        |     rv = self.invoke(ctx)
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-subscription-consumer-events_1        |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-subscription-consumer-events_1        |     return ctx.invoke(self.callback, **ctx.params)
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-subscription-consumer-events_1        |     return callback(*args, **kwargs)
+snuba-subscription-consumer-events_1        |   File "/usr/src/snuba/snuba/cli/subscriptions.py", line 138, in subscriptions
+snuba-subscription-consumer-events_1        |     SynchronizedConsumer(
+snuba-subscription-consumer-events_1        |   File "/usr/src/snuba/snuba/utils/streams/synchronized.py", line 106, in __init__
+snuba-subscription-consumer-events_1        |     self.__commit_log_worker.result()
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+snuba-subscription-consumer-events_1        |     return self.__get_result()
+snuba-subscription-consumer-events_1        |   File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+snuba-subscription-consumer-events_1        |     raise self._exception
+snuba-subscription-consumer-events_1        |   File "/usr/src/snuba/snuba/utils/concurrent.py", line 33, in run
+snuba-subscription-consumer-events_1        |     result = function()
+snuba-subscription-consumer-events_1        |   File "/usr/src/snuba/snuba/utils/streams/synchronized.py", line 130, in __run_commit_log_worker
+snuba-subscription-consumer-events_1        |     message = self.__commit_log_consumer.poll(0.1)
+snuba-subscription-consumer-events_1        |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-subscription-consumer-events_1        |     raise ConsumerError(str(error))
+snuba-subscription-consumer-events_1        | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-subscription-consumer-events_1        | 2021-04-23 08:59:13,463 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
+snuba-outcomes-consumer_1                   | 2021-04-23 08:57:37,062 New partitions assigned: {Partition(topic=Topic(name='outcomes'), index=0): 5}
+snuba-outcomes-consumer_1                   | 2021-04-23 08:57:41,163 Partitions revoked: [Partition(topic=Topic(name='outcomes'), index=0)]
+snuba-outcomes-consumer_1                   | %3|1619168305.214|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 2ms in state CONNECT)
+snuba-outcomes-consumer_1                   | %3|1619168305.214|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 17ms in state CONNECT)
+snuba-outcomes-consumer_1                   | %3|1619168306.198|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-outcomes-consumer_1                   | %3|1619168306.204|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-outcomes-consumer_1                   | 2021-04-23 08:58:41,553 Caught ConsumerError('KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}'), shutting down...
+snuba-outcomes-consumer_1                   | Traceback (most recent call last):
+snuba-outcomes-consumer_1                   |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-outcomes-consumer_1                   |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-outcomes-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-outcomes-consumer_1                   |     return self.main(*args, **kwargs)
+snuba-outcomes-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-outcomes-consumer_1                   |     rv = self.invoke(ctx)
+snuba-outcomes-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-outcomes-consumer_1                   |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-outcomes-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-outcomes-consumer_1                   |     return ctx.invoke(self.callback, **ctx.params)
+snuba-outcomes-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-outcomes-consumer_1                   |     return callback(*args, **kwargs)
+snuba-outcomes-consumer_1                   |   File "/usr/src/snuba/snuba/cli/consumer.py", line 161, in consumer
+snuba-outcomes-consumer_1                   |     consumer.run()
+snuba-outcomes-consumer_1                   |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 112, in run
+snuba-outcomes-consumer_1                   |     self._run_once()
+snuba-outcomes-consumer_1                   |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 142, in _run_once
+snuba-outcomes-consumer_1                   |     self.__message = self.__consumer.poll(timeout=1.0)
+snuba-outcomes-consumer_1                   |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-outcomes-consumer_1                   |     raise ConsumerError(str(error))
+snuba-outcomes-consumer_1                   | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-outcomes-consumer_1                   | 2021-04-23 08:59:08,582 New partitions assigned: {Partition(topic=Topic(name='outcomes'), index=0): 5}
+symbolicator-cleanup_1                      | SHELL=/bin/bash
+symbolicator-cleanup_1                      | BASH_ENV=/container.env
+symbolicator-cleanup_1                      | 55 23 * * * gosu symbolicator symbolicator cleanup > /proc/1/fd/1 2>/proc/1/fd/2
+snuba-transactions-cleanup_1                | SHELL=/bin/bash
+snuba-transactions-cleanup_1                | BASH_ENV=/container.env
+snuba-transactions-cleanup_1                | */5 * * * * gosu snuba snuba cleanup --storage transactions --dry-run False > /proc/1/fd/1 2>/proc/1/fd/2
+snuba-transactions-cleanup_1                | 2021-04-23 09:00:03,604 Dropped 0 partitions on clickhouse:9000
+snuba-transactions-cleanup_1                | 2021-04-23 09:05:03,237 Dropped 0 partitions on clickhouse:9000
+snuba-sessions-consumer_1                   | 2021-04-23 08:57:37,059 New partitions assigned: {Partition(topic=Topic(name='ingest-sessions'), index=0): 406}
+snuba-sessions-consumer_1                   | 2021-04-23 08:57:40,995 Partitions revoked: [Partition(topic=Topic(name='ingest-sessions'), index=0)]
+snuba-sessions-consumer_1                   | %3|1619168302.390|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 23ms in state CONNECT)
+snuba-sessions-consumer_1                   | %3|1619168302.390|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 2ms in state CONNECT)
+snuba-sessions-consumer_1                   | %3|1619168303.348|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-sessions-consumer_1                   | %3|1619168303.388|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-sessions-consumer_1                   | 2021-04-23 08:58:41,658 Caught ConsumerError('KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}'), shutting down...
+snuba-sessions-consumer_1                   | Traceback (most recent call last):
+snuba-sessions-consumer_1                   |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-sessions-consumer_1                   |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-sessions-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-sessions-consumer_1                   |     return self.main(*args, **kwargs)
+snuba-sessions-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-sessions-consumer_1                   |     rv = self.invoke(ctx)
+snuba-sessions-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-sessions-consumer_1                   |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-sessions-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-sessions-consumer_1                   |     return ctx.invoke(self.callback, **ctx.params)
+snuba-sessions-consumer_1                   |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-sessions-consumer_1                   |     return callback(*args, **kwargs)
+snuba-sessions-consumer_1                   |   File "/usr/src/snuba/snuba/cli/consumer.py", line 161, in consumer
+snuba-sessions-consumer_1                   |     consumer.run()
+snuba-sessions-consumer_1                   |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 112, in run
+snuba-sessions-consumer_1                   |     self._run_once()
+snuba-sessions-consumer_1                   |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 142, in _run_once
+snuba-sessions-consumer_1                   |     self.__message = self.__consumer.poll(timeout=1.0)
+snuba-sessions-consumer_1                   |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-sessions-consumer_1                   |     raise ConsumerError(str(error))
+snuba-sessions-consumer_1                   | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-sessions-consumer_1                   | 2021-04-23 08:59:08,584 New partitions assigned: {Partition(topic=Topic(name='ingest-sessions'), index=0): 406}
+subscription-consumer-transactions_1        | 08:58:33 [INFO] sentry.plugins.github: apps-not-configured
+subscription-consumer-transactions_1        | %3|1619168314.473|FAIL|rdkafka#producer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 10ms in state CONNECT)
+subscription-consumer-transactions_1        | %3|1619168315.462|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT)
+subscription-consumer-transactions_1        | %3|1619168315.473|FAIL|rdkafka#producer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+subscription-consumer-transactions_1        | %3|1619168316.462|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+subscription-consumer-transactions_1        | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'transactions-subscription-results' or its partitions are not ready, retrying...
+subscription-consumer-transactions_1        | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'transactions-subscription-results' or its partitions are not ready, retrying...
+subscription-consumer-transactions_1        | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'transactions-subscription-results' or its partitions are not ready, retrying...
+subscription-consumer-transactions_1        | Traceback (most recent call last):
+subscription-consumer-transactions_1        |   File "/usr/local/bin/sentry", line 8, in <module>
+subscription-consumer-transactions_1        |     sys.exit(main())
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/__init__.py", line 195, in main
+subscription-consumer-transactions_1        |     func(**kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+subscription-consumer-transactions_1        |     return self.main(*args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 782, in main
+subscription-consumer-transactions_1        |     rv = self.invoke(ctx)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+subscription-consumer-transactions_1        |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+subscription-consumer-transactions_1        |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+subscription-consumer-transactions_1        |     return ctx.invoke(self.callback, **ctx.params)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+subscription-consumer-transactions_1        |     return callback(*args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+subscription-consumer-transactions_1        |     return f(get_current_context(), *args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 69, in inner
+subscription-consumer-transactions_1        |     return ctx.invoke(f, *args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+subscription-consumer-transactions_1        |     return callback(*args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+subscription-consumer-transactions_1        |     return f(get_current_context(), *args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 29, in inner
+subscription-consumer-transactions_1        |     return ctx.invoke(f, *args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+subscription-consumer-transactions_1        |     return callback(*args, **kwargs)
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/commands/run.py", line 387, in query_subscription_consumer
+subscription-consumer-transactions_1        |     subscriber.run()
+subscription-consumer-transactions_1        |   File "/usr/local/lib/python3.6/site-packages/sentry/snuba/query_subscription_consumer.py", line 169, in run
+subscription-consumer-transactions_1        |     raise KafkaException(error)
+subscription-consumer-transactions_1        | cimpl.KafkaException: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+subscription-consumer-transactions_1        | 08:59:11 [INFO] sentry.plugins.github: apps-not-configured
+subscription-consumer-transactions_1        | 08:59:15 [INFO] sentry.snuba.query_subscription_consumer: query-subscription-consumer.on_assign (offsets='{0: None}' partitions='[TopicPartition{topic=transactions-subscription-results,partition=0,offset=-1001,error=None}]')
+zookeeper_1                                 | ===> ENV Variables ...
+zookeeper_1                                 | ALLOW_UNSIGNED=false
+zookeeper_1                                 | COMPONENT=zookeeper
+zookeeper_1                                 | CONFLUENT_DEB_VERSION=1
+zookeeper_1                                 | CONFLUENT_PLATFORM_LABEL=
+zookeeper_1                                 | CONFLUENT_SUPPORT_METRICS_ENABLE=false
+zookeeper_1                                 | CONFLUENT_VERSION=5.5.0
+zookeeper_1                                 | CUB_CLASSPATH=/etc/confluent/docker/docker-utils.jar
+zookeeper_1                                 | HOME=/root
+zookeeper_1                                 | HOSTNAME=551d1c5c7cdc
+zookeeper_1                                 | KAFKA_VERSION=
+zookeeper_1                                 | LANG=C.UTF-8
+zookeeper_1                                 | PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+zookeeper_1                                 | PWD=/
+zookeeper_1                                 | PYTHON_PIP_VERSION=8.1.2
+zookeeper_1                                 | PYTHON_VERSION=2.7.9-1
+zookeeper_1                                 | SCALA_VERSION=2.12
+zookeeper_1                                 | SHLVL=1
+zookeeper_1                                 | ZOOKEEPER_CLIENT_PORT=2181
+zookeeper_1                                 | ZOOKEEPER_LOG4J_ROOT_LOGLEVEL=WARN
+zookeeper_1                                 | ZOOKEEPER_TOOLS_LOG4J_LOGLEVEL=WARN
+zookeeper_1                                 | ZULU_OPENJDK_VERSION=8=8.38.0.13
+zookeeper_1                                 | _=/usr/bin/env
+zookeeper_1                                 | ===> User
+zookeeper_1                                 | uid=0(root) gid=0(root) groups=0(root)
+zookeeper_1                                 | ===> Configuring ...
+zookeeper_1                                 | ===> Running preflight checks ...
+zookeeper_1                                 | ===> Check if /var/lib/zookeeper/data is writable ...
+zookeeper_1                                 | ===> Check if /var/lib/zookeeper/log is writable ...
+zookeeper_1                                 | ===> Launching ...
+zookeeper_1                                 | ===> Launching zookeeper ...
+zookeeper_1                                 | [2021-04-23 08:56:59,582] WARN Either no config or no quorum defined in config, running  in standalone mode (org.apache.zookeeper.server.quorum.QuorumPeerMain)
+zookeeper_1                                 | [2021-04-23 08:56:59,914] WARN o.e.j.s.ServletContextHandler@4d95d2a2{/,null,UNAVAILABLE} contextPath ends with /* (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper_1                                 | [2021-04-23 08:56:59,914] WARN Empty contextPath (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper_1                                 | ===> ENV Variables ...
+zookeeper_1                                 | ALLOW_UNSIGNED=false
+zookeeper_1                                 | COMPONENT=zookeeper
+zookeeper_1                                 | CONFLUENT_DEB_VERSION=1
+zookeeper_1                                 | CONFLUENT_PLATFORM_LABEL=
+zookeeper_1                                 | CONFLUENT_SUPPORT_METRICS_ENABLE=false
+zookeeper_1                                 | CONFLUENT_VERSION=5.5.0
+zookeeper_1                                 | CUB_CLASSPATH=/etc/confluent/docker/docker-utils.jar
+zookeeper_1                                 | HOME=/root
+zookeeper_1                                 | HOSTNAME=551d1c5c7cdc
+zookeeper_1                                 | KAFKA_VERSION=
+zookeeper_1                                 | LANG=C.UTF-8
+zookeeper_1                                 | PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+zookeeper_1                                 | PWD=/
+zookeeper_1                                 | PYTHON_PIP_VERSION=8.1.2
+zookeeper_1                                 | PYTHON_VERSION=2.7.9-1
+zookeeper_1                                 | SCALA_VERSION=2.12
+zookeeper_1                                 | SHLVL=1
+zookeeper_1                                 | ZOOKEEPER_CLIENT_PORT=2181
+zookeeper_1                                 | ZOOKEEPER_LOG4J_ROOT_LOGLEVEL=WARN
+zookeeper_1                                 | ZOOKEEPER_TOOLS_LOG4J_LOGLEVEL=WARN
+zookeeper_1                                 | ZULU_OPENJDK_VERSION=8=8.38.0.13
+zookeeper_1                                 | _=/usr/bin/env
+zookeeper_1                                 | ===> User
+zookeeper_1                                 | uid=0(root) gid=0(root) groups=0(root)
+zookeeper_1                                 | ===> Configuring ...
+zookeeper_1                                 | ===> Running preflight checks ...
+zookeeper_1                                 | ===> Check if /var/lib/zookeeper/data is writable ...
+zookeeper_1                                 | ===> Check if /var/lib/zookeeper/log is writable ...
+zookeeper_1                                 | ===> Launching ...
+subscription-consumer-events_1              | 08:58:33 [INFO] sentry.plugins.github: apps-not-configured
+subscription-consumer-events_1              | %3|1619168314.698|FAIL|rdkafka#producer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 6ms in state CONNECT)
+subscription-consumer-events_1              | %3|1619168315.696|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT)
+subscription-consumer-events_1              | %3|1619168315.696|FAIL|rdkafka#producer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+subscription-consumer-events_1              | %3|1619168316.691|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+subscription-consumer-events_1              | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'events-subscription-results' or its partitions are not ready, retrying...
+subscription-consumer-events_1              | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'events-subscription-results' or its partitions are not ready, retrying...
+subscription-consumer-events_1              | 08:58:40 [WARNING] batching-kafka-consumer: Topic 'events-subscription-results' or its partitions are not ready, retrying...
+subscription-consumer-events_1              | Traceback (most recent call last):
+subscription-consumer-events_1              |   File "/usr/local/bin/sentry", line 8, in <module>
+subscription-consumer-events_1              |     sys.exit(main())
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/__init__.py", line 195, in main
+subscription-consumer-events_1              |     func(**kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 829, in __call__
+subscription-consumer-events_1              |     return self.main(*args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 782, in main
+subscription-consumer-events_1              |     rv = self.invoke(ctx)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+subscription-consumer-events_1              |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1259, in invoke
+subscription-consumer-events_1              |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 1066, in invoke
+subscription-consumer-events_1              |     return ctx.invoke(self.callback, **ctx.params)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+subscription-consumer-events_1              |     return callback(*args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+subscription-consumer-events_1              |     return f(get_current_context(), *args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 69, in inner
+subscription-consumer-events_1              |     return ctx.invoke(f, *args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+subscription-consumer-events_1              |     return callback(*args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/decorators.py", line 21, in new_func
+subscription-consumer-events_1              |     return f(get_current_context(), *args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/decorators.py", line 29, in inner
+subscription-consumer-events_1              |     return ctx.invoke(f, *args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/click/core.py", line 610, in invoke
+subscription-consumer-events_1              |     return callback(*args, **kwargs)
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/sentry/runner/commands/run.py", line 387, in query_subscription_consumer
+subscription-consumer-events_1              |     subscriber.run()
+subscription-consumer-events_1              |   File "/usr/local/lib/python3.6/site-packages/sentry/snuba/query_subscription_consumer.py", line 169, in run
+subscription-consumer-events_1              |     raise KafkaException(error)
+subscription-consumer-events_1              | cimpl.KafkaException: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+subscription-consumer-events_1              | 08:59:11 [INFO] sentry.plugins.github: apps-not-configured
+subscription-consumer-events_1              | 08:59:15 [INFO] sentry.snuba.query_subscription_consumer: query-subscription-consumer.on_assign (offsets='{0: None}' partitions='[TopicPartition{topic=events-subscription-results,partition=0,offset=-1001,error=None}]')
+web_1                                       | 08:58:33 [INFO] sentry.plugins.github: apps-not-configured
+web_1                                       | *** Starting uWSGI 2.0.19.1 (64bit) on [Fri Apr 23 08:58:34 2021] ***
+web_1                                       | compiled with version: 8.3.0 on 20 April 2021 18:10:24
+web_1                                       | os: Linux-5.4.0-1045-aws #47-Ubuntu SMP Tue Apr 13 07:02:25 UTC 2021
+web_1                                       | nodename: 69882b36afe3
+web_1                                       | machine: x86_64
+web_1                                       | clock source: unix
+web_1                                       | detected number of CPU cores: 2
+web_1                                       | current working directory: /
+web_1                                       | detected binary path: /usr/local/bin/uwsgi
+web_1                                       | !!! no internal routing support, rebuild with pcre support !!!
+web_1                                       | your memory page size is 4096 bytes
+web_1                                       | detected max file descriptor number: 1048576
+web_1                                       | lock engine: pthread robust mutexes
+web_1                                       | thunder lock: enabled
+web_1                                       | uWSGI http bound on 0.0.0.0:9000 fd 4
+web_1                                       | uwsgi socket 0 bound to TCP address 127.0.0.1:37955 (port auto-assigned) fd 3
+web_1                                       | Python version: 3.6.13 (default, Apr 10 2021, 16:37:05)  [GCC 8.3.0]
+web_1                                       | Set PythonHome to /usr/local
+web_1                                       | Python main interpreter initialized at 0x5596deb69ef0
+web_1                                       | python threads support enabled
+web_1                                       | your server socket listen backlog is limited to 100 connections
+web_1                                       | your mercy for graceful operations on workers is 60 seconds
+web_1                                       | setting request body buffering size to 65536 bytes
+web_1                                       | mapped 1924224 bytes (1879 KB) for 12 cores
+web_1                                       | *** Operational MODE: preforking+threaded ***
+web_1                                       | spawned uWSGI master process (pid: 20)
+web_1                                       | spawned uWSGI worker 1 (pid: 24, cores: 4)
+web_1                                       | spawned uWSGI worker 2 (pid: 25, cores: 4)
+web_1                                       | spawned uWSGI worker 3 (pid: 26, cores: 4)
+web_1                                       | spawned uWSGI http 1 (pid: 27)
+web_1                                       | 08:59:13 [INFO] sentry.plugins.github: apps-not-configured
+web_1                                       | 08:59:13 [INFO] sentry.plugins.github: apps-not-configured
+web_1                                       | 08:59:13 [INFO] sentry.plugins.github: apps-not-configured
+web_1                                       | WSGI app 0 (mountpoint='') ready in 39 seconds on interpreter 0x5596deb69ef0 pid: 24 (default app)
+web_1                                       | WSGI app 0 (mountpoint='') ready in 40 seconds on interpreter 0x5596deb69ef0 pid: 26 (default app)
+web_1                                       | WSGI app 0 (mountpoint='') ready in 40 seconds on interpreter 0x5596deb69ef0 pid: 25 (default app)
+zookeeper_1                                 | ===> Launching zookeeper ...
+zookeeper_1                                 | [2021-04-23 08:58:16,122] WARN Either no config or no quorum defined in config, running  in standalone mode (org.apache.zookeeper.server.quorum.QuorumPeerMain)
+zookeeper_1                                 | [2021-04-23 08:58:19,037] WARN o.e.j.s.ServletContextHandler@4d95d2a2{/,null,UNAVAILABLE} contextPath ends with /* (org.eclipse.jetty.server.handler.ContextHandler)
+zookeeper_1                                 | [2021-04-23 08:58:19,067] WARN Empty contextPath (org.eclipse.jetty.server.handler.ContextHandler)
+worker_1                                    | 08:58:33 [INFO] sentry.plugins.github: apps-not-configured
+worker_1                                    | 08:58:34 [INFO] sentry.bgtasks: bgtask.spawn (task_name='sentry.bgtasks.clean_dsymcache:clean_dsymcache')
+worker_1                                    | 08:58:34 [INFO] sentry.bgtasks: bgtask.spawn (task_name='sentry.bgtasks.clean_releasefilecache:clean_releasefilecache')
+worker_1                                    |
+worker_1                                    |  -------------- celery@330ada90e2ef v4.4.7 (cliffs)
+worker_1                                    | --- ***** -----
+worker_1                                    | -- ******* ---- Linux-5.4.0-1045-aws-x86_64-with-debian-10.9 2021-04-23 08:58:37
+worker_1                                    | - *** --- * ---
+worker_1                                    | - ** ---------- [config]
+worker_1                                    | - ** ---------- .> app:         sentry:0x7f7decce4048
+worker_1                                    | - ** ---------- .> transport:   redis://redis:6379/0
+worker_1                                    | - ** ---------- .> results:     disabled://
+worker_1                                    | - *** --- * --- .> concurrency: 2 (prefork)
+worker_1                                    | -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+worker_1                                    | --- ***** -----
+worker_1                                    |  -------------- [queues]
+worker_1                                    |                 .> activity.notify  exchange=default(direct) key=activity.notify
+worker_1                                    |                 .> alerts           exchange=default(direct) key=alerts
+worker_1                                    |                 .> app_platform     exchange=default(direct) key=app_platform
+worker_1                                    |                 .> assemble         exchange=default(direct) key=assemble
+worker_1                                    |                 .> auth             exchange=default(direct) key=auth
+worker_1                                    |                 .> buffers.process_pending exchange=default(direct) key=buffers.process_pending
+worker_1                                    |                 .> cleanup          exchange=default(direct) key=cleanup
+worker_1                                    |                 .> commits          exchange=default(direct) key=commits
+worker_1                                    |                 .> counters-0       exchange=counters(direct) key=default
+worker_1                                    |                 .> data_export      exchange=default(direct) key=data_export
+worker_1                                    |                 .> default          exchange=default(direct) key=default
+worker_1                                    |                 .> digests.delivery exchange=default(direct) key=digests.delivery
+worker_1                                    |                 .> digests.scheduling exchange=default(direct) key=digests.scheduling
+worker_1                                    |                 .> email            exchange=default(direct) key=email
+worker_1                                    |                 .> events.preprocess_event exchange=default(direct) key=events.preprocess_event
+worker_1                                    |                 .> events.process_event exchange=default(direct) key=events.process_event
+worker_1                                    |                 .> events.reprocess_events exchange=default(direct) key=events.reprocess_events
+worker_1                                    |                 .> events.reprocessing.preprocess_event exchange=default(direct) key=events.reprocessing.preprocess_event
+worker_1                                    |                 .> events.reprocessing.process_event exchange=default(direct) key=events.reprocessing.process_event
+worker_1                                    |                 .> events.reprocessing.symbolicate_event exchange=default(direct) key=events.reprocessing.symbolicate_event
+worker_1                                    |                 .> events.save_event exchange=default(direct) key=events.save_event
+worker_1                                    |                 .> events.symbolicate_event exchange=default(direct) key=events.symbolicate_event
+worker_1                                    |                 .> files.delete     exchange=default(direct) key=files.delete
+worker_1                                    |                 .> group_owners.process_suspect_commits exchange=default(direct) key=group_owners.process_suspect_commits
+worker_1                                    |                 .> incident_snapshots exchange=default(direct) key=incident_snapshots
+worker_1                                    |                 .> incidents        exchange=default(direct) key=incidents
+worker_1                                    |                 .> integrations     exchange=default(direct) key=integrations
+worker_1                                    |                 .> merge            exchange=default(direct) key=merge
+worker_1                                    |                 .> options          exchange=default(direct) key=options
+worker_1                                    |                 .> relay_config     exchange=default(direct) key=relay_config
+worker_1                                    |                 .> reports.deliver  exchange=default(direct) key=reports.deliver
+worker_1                                    |                 .> reports.prepare  exchange=default(direct) key=reports.prepare
+worker_1                                    |                 .> search           exchange=default(direct) key=search
+worker_1                                    |                 .> sleep            exchange=default(direct) key=sleep
+worker_1                                    |                 .> stats            exchange=default(direct) key=stats
+worker_1                                    |                 .> subscriptions    exchange=default(direct) key=subscriptions
+worker_1                                    |                 .> triggers-0       exchange=triggers(direct) key=default
+worker_1                                    |                 .> unmerge          exchange=default(direct) key=unmerge
+worker_1                                    |                 .> update           exchange=default(direct) key=update
+worker_1                                    |
+worker_1                                    | 09:03:36 [WARNING] sentry.tasks.release_registry: Release registry URL is not specified, skipping the task.
+snuba-transactions-consumer_1               | 2021-04-23 08:57:37,638 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
+snuba-transactions-consumer_1               | 2021-04-23 08:57:40,604 Partitions revoked: [Partition(topic=Topic(name='events'), index=0)]
+snuba-transactions-consumer_1               | %3|1619168301.031|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 19ms in state CONNECT)
+snuba-transactions-consumer_1               | %3|1619168301.032|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 24ms in state CONNECT)
+snuba-transactions-consumer_1               | %3|1619168302.012|FAIL|rdkafka#producer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-transactions-consumer_1               | %3|1619168302.012|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-transactions-consumer_1               | 2021-04-23 08:58:41,066 Caught ConsumerError('KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}'), shutting down...
+snuba-transactions-consumer_1               | Traceback (most recent call last):
+snuba-transactions-consumer_1               |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-transactions-consumer_1               |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-transactions-consumer_1               |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-transactions-consumer_1               |     return self.main(*args, **kwargs)
+snuba-transactions-consumer_1               |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-transactions-consumer_1               |     rv = self.invoke(ctx)
+snuba-transactions-consumer_1               |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-transactions-consumer_1               |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-transactions-consumer_1               |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-transactions-consumer_1               |     return ctx.invoke(self.callback, **ctx.params)
+snuba-transactions-consumer_1               |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-transactions-consumer_1               |     return callback(*args, **kwargs)
+snuba-transactions-consumer_1               |   File "/usr/src/snuba/snuba/cli/consumer.py", line 161, in consumer
+snuba-transactions-consumer_1               |     consumer.run()
+snuba-transactions-consumer_1               |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 112, in run
+snuba-transactions-consumer_1               |     self._run_once()
+snuba-transactions-consumer_1               |   File "/usr/src/snuba/snuba/utils/streams/processing/processor.py", line 142, in _run_once
+snuba-transactions-consumer_1               |     self.__message = self.__consumer.poll(timeout=1.0)
+snuba-transactions-consumer_1               |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 773, in poll
+snuba-transactions-consumer_1               |     return super().poll(timeout)
+snuba-transactions-consumer_1               |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-transactions-consumer_1               |     raise ConsumerError(str(error))
+snuba-transactions-consumer_1               | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-transactions-consumer_1               | 2021-04-23 08:59:09,621 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
+snuba-subscription-consumer-transactions_1  | %3|1619168303.609|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 16ms in state CONNECT)
+snuba-subscription-consumer-transactions_1  | %3|1619168304.588|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT)
+snuba-subscription-consumer-transactions_1  | %3|1619168304.592|FAIL|rdkafka#consumer-2| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-subscription-consumer-transactions_1  | %3|1619168305.588|FAIL|rdkafka#consumer-1| [thrd:kafka:9092/bootstrap]: kafka:9092/bootstrap: Connect to ipv4#172.23.0.11:9092 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)
+snuba-subscription-consumer-transactions_1  | Traceback (most recent call last):
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/bin/snuba", line 33, in <module>
+snuba-subscription-consumer-transactions_1  |     sys.exit(load_entry_point('snuba', 'console_scripts', 'snuba')())
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+snuba-subscription-consumer-transactions_1  |     return self.main(*args, **kwargs)
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 782, in main
+snuba-subscription-consumer-transactions_1  |     rv = self.invoke(ctx)
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1259, in invoke
+snuba-subscription-consumer-transactions_1  |     return _process_result(sub_ctx.command.invoke(sub_ctx))
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+snuba-subscription-consumer-transactions_1  |     return ctx.invoke(self.callback, **ctx.params)
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+snuba-subscription-consumer-transactions_1  |     return callback(*args, **kwargs)
+snuba-subscription-consumer-transactions_1  |   File "/usr/src/snuba/snuba/cli/subscriptions.py", line 138, in subscriptions
+snuba-subscription-consumer-transactions_1  |     SynchronizedConsumer(
+snuba-subscription-consumer-transactions_1  |   File "/usr/src/snuba/snuba/utils/streams/synchronized.py", line 106, in __init__
+snuba-subscription-consumer-transactions_1  |     self.__commit_log_worker.result()
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+snuba-subscription-consumer-transactions_1  |     return self.__get_result()
+snuba-subscription-consumer-transactions_1  |   File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+snuba-subscription-consumer-transactions_1  |     raise self._exception
+snuba-subscription-consumer-transactions_1  |   File "/usr/src/snuba/snuba/utils/concurrent.py", line 33, in run
+snuba-subscription-consumer-transactions_1  |     result = function()
+snuba-subscription-consumer-transactions_1  |   File "/usr/src/snuba/snuba/utils/streams/synchronized.py", line 130, in __run_commit_log_worker
+snuba-subscription-consumer-transactions_1  |     message = self.__commit_log_consumer.poll(0.1)
+snuba-subscription-consumer-transactions_1  |   File "/usr/src/snuba/snuba/utils/streams/backends/kafka.py", line 405, in poll
+snuba-subscription-consumer-transactions_1  |     raise ConsumerError(str(error))
+snuba-subscription-consumer-transactions_1  | snuba.utils.streams.backends.abstract.ConsumerError: KafkaError{code=COORDINATOR_LOAD_IN_PROGRESS,val=14,str="JoinGroup failed: Broker: Coordinator load in progress"}
+snuba-subscription-consumer-transactions_1  | 2021-04-23 08:59:11,978 New partitions assigned: {Partition(topic=Topic(name='events'), index=0): 5}
